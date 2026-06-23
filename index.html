@@ -10,7 +10,7 @@
   --gold: #C8963E;
   --gold-light: #F4E4C1;
   --dark: #1C1C2E;
-  --cream: #F9F5F0;
+  --cream: #F5EDE0;
   --coral: #E8734A;
   --teal: #2D7D6F;
   --teal-light: rgba(45,125,111,0.1);
@@ -59,13 +59,13 @@ nav {
 /* ===== HERO ===== */
 .hero {
   min-height:100vh; padding-top:100px;
-  background:radial-gradient(ellipse at 70% 50%, #2D1B69 0%, #1C1C2E 50%, #12303D 100%);
+  background:linear-gradient(160deg, #FFFCF5 0%, #FFF3D6 35%, #FDE8C8 65%, #F5EDE0 100%);
   display:flex; align-items:center; justify-content:center;
   text-align:center; padding-inline:2rem; position:relative; overflow:hidden;
 }
 .hero::before {
   content:''; position:absolute; inset:0;
-  background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C8963E' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C8963E' fill-opacity='0.09'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 .hero-badge {
   display:inline-block; background:var(--gold); color:var(--dark);
@@ -73,17 +73,17 @@ nav {
   margin-bottom:1.5rem; letter-spacing:0.08em;
 }
 .hero h1 {
-  font-size:clamp(2rem,6vw,3.8rem); color:white; line-height:1.2; margin-bottom:1rem;
+  font-size:clamp(2rem,6vw,3.8rem); color:var(--dark); line-height:1.2; margin-bottom:1rem;
 }
 .hero h1 span { color:var(--gold); }
-.hero-sub { color:rgba(255,255,255,0.65); font-size:1rem; margin-bottom:2rem; line-height:1.8; }
+.hero-sub { color:#7A5C3A; font-size:1rem; margin-bottom:2rem; line-height:1.8; }
 .countdown { display:flex; gap:0.75rem; justify-content:center; margin:2rem 0; }
 .cd-item {
-  background:rgba(255,255,255,0.07); border:1px solid rgba(200,150,62,0.25);
+  background:rgba(255,255,255,0.75); border:1px solid rgba(200,150,62,0.35); box-shadow:0 2px 12px rgba(200,150,62,0.1);
   border-radius:12px; padding:0.75rem 1rem; min-width:68px;
 }
 .cd-num { display:block; font-size:1.9rem; font-weight:700; color:var(--gold); line-height:1; }
-.cd-lbl { font-size:0.7rem; color:rgba(255,255,255,0.45); margin-top:0.2rem; }
+.cd-lbl { font-size:0.7rem; color:#A07850; margin-top:0.2rem; }
 .cta-btn {
   display:inline-block; background:var(--gold); color:var(--dark);
   padding:0.9rem 2.4rem; border-radius:50px; font-size:1rem; font-weight:700;
@@ -91,7 +91,35 @@ nav {
   transition:transform 0.2s, box-shadow 0.2s;
 }
 .cta-btn:hover { transform:translateY(-2px); box-shadow:0 10px 30px rgba(200,150,62,0.4); }
-.hero-flags { margin-top:2.5rem; color:rgba(255,255,255,0.3); font-size:0.78rem; }
+.hero-flags { margin-top:2.5rem; color:rgba(100,70,40,0.45); font-size:0.78rem; }
+
+
+/* ===== HERO DECO ELEMENTS ===== */
+.hero-deco {
+  position:absolute; inset:0; pointer-events:none; overflow:hidden; z-index:0;
+}
+.deco-el {
+  position:absolute; opacity:0.55; user-select:none;
+  animation-timing-function:ease-in-out; animation-iteration-count:infinite;
+}
+@keyframes float1 {
+  0%,100%{ transform:translateY(0px) translateX(0px) rotate(-3deg); }
+  50%{ transform:translateY(-18px) translateX(8px) rotate(3deg); }
+}
+@keyframes float2 {
+  0%,100%{ transform:translateY(0px) rotate(0deg); }
+  50%{ transform:translateY(-12px) rotate(-5deg); }
+}
+@keyframes float3 {
+  0%,100%{ transform:translateY(0px) translateX(0px); }
+  33%{ transform:translateY(-10px) translateX(6px); }
+  66%{ transform:translateY(6px) translateX(-4px); }
+}
+@keyframes fly {
+  0%{ transform:translateX(0px) translateY(0px); }
+  50%{ transform:translateX(12px) translateY(-8px); }
+  100%{ transform:translateX(0px) translateY(0px); }
+}
 
 /* ===== SECTION ===== */
 .section { padding:5rem 2rem; max-width:1200px; margin:0 auto; }
@@ -100,7 +128,7 @@ nav {
 .section-title p { color:#777; margin-top:0.4rem; font-size:0.9rem; }
 
 /* ===== PRODUCTS ===== */
-.products-bg { background:#F4F0EA; }
+.products-bg { background:#EDE4D3; }
 .products-grid {
   display:grid; grid-template-columns:repeat(auto-fill,minmax(270px,1fr)); gap:1.25rem;
 }
@@ -434,6 +462,21 @@ footer strong { color:rgba(255,255,255,0.7); }
 
 <!-- Hero -->
 <section class="hero" id="home">
+  <div class="hero-deco">
+    <!-- Clouds -->
+    <div class="deco-el" style="font-size:3.2rem;top:12%;left:4%;animation:float1 6s infinite;animation-delay:0s">☁️</div>
+    <div class="deco-el" style="font-size:2rem;top:20%;right:6%;animation:float2 7s infinite;animation-delay:1.5s">☁️</div>
+    <div class="deco-el" style="font-size:1.5rem;top:65%;left:7%;animation:float3 8s infinite;animation-delay:0.8s">☁️</div>
+    <div class="deco-el" style="font-size:2.5rem;top:70%;right:9%;animation:float1 9s infinite;animation-delay:2s">☁️</div>
+    <div class="deco-el" style="font-size:1.2rem;top:40%;left:2%;animation:float2 5.5s infinite;animation-delay:3s;opacity:0.3">☁️</div>
+    <!-- Airplane -->
+    <div class="deco-el" style="font-size:2.4rem;top:15%;right:18%;animation:fly 5s infinite;animation-delay:0.5s">✈️</div>
+    <!-- Luggage -->
+    <div class="deco-el" style="font-size:2rem;bottom:18%;left:12%;animation:float3 7s infinite;animation-delay:1s">🧳</div>
+    <div class="deco-el" style="font-size:1.4rem;bottom:22%;right:14%;animation:float2 8s infinite;animation-delay:2.5s;opacity:0.4">🎀</div>
+    <!-- Thai flag hint -->
+    <div class="deco-el" style="font-size:1.6rem;top:55%;right:3%;animation:float1 6.5s infinite;animation-delay:1.8s;opacity:0.5">🇹🇭</div>
+  </div>
   <div style="position:relative;z-index:1;max-width:680px">
     <div class="hero-badge">🛍️ 限时团购 · 亲自飞去帮你买</div>
     <h1>泰够<span>荔迪</span>好买<br>我们亲自飞去买</h1>
@@ -943,11 +986,11 @@ function renderProducts() {
            </div>
          </div>` : '';
     const imgHtml = p.img
-      ? `<img src="${p.img}" alt="${p.name}" style="width:100%;height:100%;object-fit:cover;object-position:center">`
+      ? `<img src="${p.img}" alt="${p.name}" style="width:100%;height:100%;object-fit:contain;object-position:center;padding:0.75rem">`
       : `<span>${p.emoji}</span>`;
     return `
     <div class="product-card fade">
-      <div class="product-img" style="background:${p.bg}">
+      <div class="product-img" style="background:${p.img ? '#FAF7F2' : p.bg}">
         ${imgHtml}
         <div class="product-badge-tag">${p.badge}</div>
       </div>
