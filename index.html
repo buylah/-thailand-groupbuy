@@ -1,1113 +1,1319 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>泰够荔迪好买 · 泰国开团</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo+Expanded:wght@700;800&family=Space+Mono:wght@400;700&family=Noto+Sans+SC:wght@400;500;600;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<title>泰够荔迪好买 · 3天泰国精选团购</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --paper:#F7F2E8;
-    --paper-2:#EFE7D6;
-    --ink:#1F1B16;
-    --ink-soft:#5A5147;
-    --gold:#C8932E;
-    --gold-deep:#9C6E1C;
-    --stamp:#B23A28;
-    --jade:#5C7A6B;
-    --line:rgba(31,27,22,0.18);
-    --shadow: 0 10px 30px rgba(31,27,22,0.12);
-  }
+:root {
+  --gold: #C8963E;
+  --gold-light: #F4E4C1;
+  --dark: #1C1C2E;
+  --cream: #F9F5F0;
+  --coral: #E8734A;
+  --teal: #2D7D6F;
+  --teal-light: rgba(45,125,111,0.1);
+  --shadow: 0 4px 24px rgba(0,0,0,0.08);
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior: smooth; }
+body { font-family:'Noto Sans SC',sans-serif; background:var(--cream); color:var(--dark); }
 
-  *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  body{
-    margin:0;
-    background:var(--paper);
-    color:var(--ink);
-    font-family:'Noto Sans SC','Space Mono',monospace;
-    -webkit-font-smoothing:antialiased;
-  }
-  body::before{
-    content:"";
-    position:fixed; inset:0;
-    background-image:
-      radial-gradient(circle at 20% 30%, rgba(31,27,22,0.025) 0, transparent 40%),
-      radial-gradient(circle at 80% 70%, rgba(31,27,22,0.025) 0, transparent 40%);
-    pointer-events:none;
-    z-index:0;
-  }
-  .wrap{max-width:1080px; margin:0 auto; padding:0 24px; position:relative; z-index:1;}
+/* ===== NOTICE BAR ===== */
+.notice-bar {
+  background: linear-gradient(90deg, var(--coral), var(--gold));
+  color:white; text-align:center; padding:0.5rem 1rem; font-size:0.82rem;
+  position:relative; z-index:1100;
+}
 
-  h1,h2,h3,.display{
-    font-family:'Archivo Expanded', sans-serif;
-    text-transform:uppercase;
-    letter-spacing:0.01em;
-  }
-  .mono{font-family:'Space Mono', monospace;}
+/* ===== NAV ===== */
+nav {
+  position:fixed; top:32px; width:100%;
+  background:rgba(28,28,46,0.97); backdrop-filter:blur(12px);
+  z-index:1000; padding:0.9rem 2rem;
+  display:flex; justify-content:space-between; align-items:center;
+}
+.logo { color:var(--gold); font-size:1.05rem; font-weight:700; letter-spacing:0.02em; }
+.nav-links { display:flex; gap:2rem; list-style:none; }
+.nav-links a { color:rgba(255,255,255,0.8); text-decoration:none; font-size:0.88rem; transition:color 0.2s; }
+.nav-links a:hover { color:var(--gold); }
+.nav-right { display:flex; align-items:center; gap:0.75rem; }
+.user-btn {
+  background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.2);
+  color:white; padding:0.4rem 0.9rem; border-radius:50px; cursor:pointer; font-size:0.82rem;
+  font-family:inherit;
+}
+.cart-btn {
+  position:relative; background:var(--gold); border:none; border-radius:50%;
+  width:38px; height:38px; cursor:pointer; display:flex; align-items:center;
+  justify-content:center; font-size:1rem; transition:transform 0.2s;
+}
+.cart-btn:hover { transform:scale(1.08); }
+.cart-count {
+  position:absolute; top:-4px; right:-4px; background:var(--coral); color:white;
+  border-radius:50%; width:17px; height:17px; font-size:0.6rem;
+  display:none; align-items:center; justify-content:center; font-weight:700;
+}
 
-  a{color:inherit;}
+/* ===== HERO ===== */
+.hero {
+  min-height:100vh; padding-top:100px;
+  background:radial-gradient(ellipse at 70% 50%, #2D1B69 0%, #1C1C2E 50%, #12303D 100%);
+  display:flex; align-items:center; justify-content:center;
+  text-align:center; padding-inline:2rem; position:relative; overflow:hidden;
+}
+.hero::before {
+  content:''; position:absolute; inset:0;
+  background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C8963E' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+.hero-badge {
+  display:inline-block; background:var(--gold); color:var(--dark);
+  padding:0.3rem 1.2rem; border-radius:50px; font-size:0.78rem; font-weight:700;
+  margin-bottom:1.5rem; letter-spacing:0.08em;
+}
+.hero h1 {
+  font-size:clamp(2rem,6vw,3.8rem); color:white; line-height:1.2; margin-bottom:1rem;
+}
+.hero h1 span { color:var(--gold); }
+.hero-sub { color:rgba(255,255,255,0.65); font-size:1rem; margin-bottom:2rem; line-height:1.8; }
+.countdown { display:flex; gap:0.75rem; justify-content:center; margin:2rem 0; }
+.cd-item {
+  background:rgba(255,255,255,0.07); border:1px solid rgba(200,150,62,0.25);
+  border-radius:12px; padding:0.75rem 1rem; min-width:68px;
+}
+.cd-num { display:block; font-size:1.9rem; font-weight:700; color:var(--gold); line-height:1; }
+.cd-lbl { font-size:0.7rem; color:rgba(255,255,255,0.45); margin-top:0.2rem; }
+.cta-btn {
+  display:inline-block; background:var(--gold); color:var(--dark);
+  padding:0.9rem 2.4rem; border-radius:50px; font-size:1rem; font-weight:700;
+  text-decoration:none; border:none; cursor:pointer; font-family:inherit;
+  transition:transform 0.2s, box-shadow 0.2s;
+}
+.cta-btn:hover { transform:translateY(-2px); box-shadow:0 10px 30px rgba(200,150,62,0.4); }
+.hero-flags { margin-top:2.5rem; color:rgba(255,255,255,0.3); font-size:0.78rem; }
 
-  /* ===== HEADER STRIP ===== */
-  .top-strip{
-    background:var(--ink);
-    color:var(--paper);
-    font-family:'Space Mono',monospace;
-    font-size:11px;
-    letter-spacing:0.08em;
-    padding:7px 0;
-    overflow:hidden;
-    white-space:nowrap;
-    position:relative;
-  }
-  .marquee{
-    display:inline-flex;
-    gap:40px;
-    animation:scroll 28s linear infinite;
-  }
-  .marquee span{display:inline-flex; align-items:center; gap:10px;}
-  .marquee .dot{width:4px;height:4px;background:var(--gold);border-radius:50%;display:inline-block;}
-  @keyframes scroll{
-    from{transform:translateX(0);}
-    to{transform:translateX(-50%);}
-  }
-  @media (prefers-reduced-motion: reduce){
-    .marquee{animation:none;}
-  }
+/* ===== SECTION ===== */
+.section { padding:5rem 2rem; max-width:1200px; margin:0 auto; }
+.section-title { text-align:center; margin-bottom:3rem; }
+.section-title h2 { font-size:1.9rem; }
+.section-title p { color:#777; margin-top:0.4rem; font-size:0.9rem; }
 
-  /* ===== HERO ===== */
-  .hero{
-    padding:64px 0 40px;
-    position:relative;
-  }
-  .hero-tag{
-    display:inline-flex;
-    align-items:center;
-    gap:10px;
-    background:var(--paper);
-    border:1.5px dashed var(--gold-deep);
-    padding:6px 14px;
-    border-radius:999px;
-    font-family:'Space Mono',monospace;
-    font-size:12px;
-    letter-spacing:0.05em;
-    color:var(--gold-deep);
-    margin-bottom:28px;
-  }
-  .hero-tag .pulse{
-    width:7px;height:7px;border-radius:50%;
-    background:var(--stamp);
-    animation:pulse 1.8s ease-in-out infinite;
-  }
-  @keyframes pulse{
-    0%,100%{opacity:1; transform:scale(1);}
-    50%{opacity:0.4; transform:scale(0.8);}
-  }
-  @media (prefers-reduced-motion: reduce){ .pulse{animation:none;} }
+/* ===== PRODUCTS ===== */
+.products-bg { background:#F4F0EA; }
+.products-grid {
+  display:grid; grid-template-columns:repeat(auto-fill,minmax(270px,1fr)); gap:1.25rem;
+}
+.product-card {
+  background:white; border-radius:16px; overflow:hidden;
+  box-shadow:var(--shadow); transition:transform 0.3s, box-shadow 0.3s;
+}
+.product-card:hover { transform:translateY(-5px); box-shadow:0 12px 40px rgba(0,0,0,0.13); }
+.product-img {
+  height:190px; display:flex; align-items:center; justify-content:center;
+  font-size:3.5rem; position:relative;
+}
+.product-badge-tag {
+  position:absolute; top:10px; left:10px; background:var(--coral);
+  color:white; padding:0.18rem 0.55rem; border-radius:50px; font-size:0.68rem; font-weight:700;
+}
+.product-body { padding:1.1rem; }
+.prod-brand { font-size:0.7rem; color:var(--teal); font-weight:700; text-transform:uppercase; letter-spacing:0.05em; }
+.prod-name { font-size:0.95rem; font-weight:700; margin:0.25rem 0 0.4rem; }
+.prod-desc { font-size:0.8rem; color:#888; line-height:1.5; margin-bottom:0.9rem; }
+.variant-block { margin-bottom:0.7rem; }
+.variant-lbl { font-size:0.7rem; color:#999; margin-bottom:0.3rem; }
+.variant-opts { display:flex; flex-wrap:wrap; gap:0.3rem; }
+.vbtn {
+  padding:0.2rem 0.55rem; border:1px solid #ddd; border-radius:4px;
+  font-size:0.72rem; cursor:pointer; background:white; font-family:inherit; transition:all 0.15s;
+}
+.vbtn.sel { border-color:var(--gold); background:var(--gold-light); color:var(--dark); font-weight:600; }
+.prod-footer { display:flex; align-items:center; justify-content:space-between; }
+.prod-price { font-size:1.3rem; font-weight:700; color:var(--gold); }
+.prod-price small { font-size:0.75rem; font-weight:400; color:#aaa; }
+.add-btn {
+  background:var(--dark); color:white; border:none; padding:0.55rem 0.9rem;
+  border-radius:8px; cursor:pointer; font-size:0.8rem; font-family:inherit; transition:background 0.2s;
+}
+.add-btn:hover { background:var(--teal); }
 
-  .hero h1{
-    font-size:clamp(40px,7vw,78px);
-    line-height:0.96;
-    margin:0 0 18px;
-    color:var(--ink);
-  }
-  .hero h1 .accent{color:var(--stamp);}
-  .hero h1 .gold{color:var(--gold-deep);}
+/* ===== CART DRAWER ===== */
+.overlay { position:fixed; inset:0; background:rgba(0,0,0,0.45); z-index:1998; display:none; }
+.overlay.on { display:block; }
+.cart-drawer {
+  position:fixed; top:0; right:-440px; width:420px; max-width:100vw; height:100vh;
+  background:white; z-index:1999; box-shadow:-8px 0 40px rgba(0,0,0,0.12);
+  transition:right 0.3s ease; display:flex; flex-direction:column;
+}
+.cart-drawer.open { right:0; }
+.drawer-head {
+  padding:1.25rem 1.5rem; border-bottom:1px solid #f0f0f0;
+  display:flex; justify-content:space-between; align-items:center;
+}
+.drawer-head h3 { font-size:1.05rem; }
+.x-btn { background:none; border:none; font-size:1.4rem; cursor:pointer; color:#999; line-height:1; }
+.cart-list { flex:1; overflow-y:auto; padding:0.75rem 1rem; }
+.cart-empty { text-align:center; padding:3rem 1rem; color:#ccc; }
+.ci { display:flex; gap:0.75rem; padding:0.9rem 0; border-bottom:1px solid #f7f7f7; }
+.ci-icon {
+  width:56px; height:56px; border-radius:10px; display:flex; align-items:center;
+  justify-content:center; font-size:1.6rem; flex-shrink:0;
+}
+.ci-info { flex:1; min-width:0; }
+.ci-name { font-size:0.85rem; font-weight:600; }
+.ci-var { font-size:0.72rem; color:#aaa; margin:0.15rem 0; }
+.ci-price { font-size:0.88rem; font-weight:700; color:var(--gold); }
+.ci-ctrl { display:flex; align-items:center; gap:0.4rem; margin-top:0.4rem; }
+.qty-btn {
+  width:22px; height:22px; border:1px solid #e0e0e0; background:white;
+  border-radius:4px; cursor:pointer; font-size:0.85rem; line-height:1;
+}
+.ci-qty { font-size:0.85rem; min-width:18px; text-align:center; }
+.rm-btn { background:none; border:none; color:#ddd; cursor:pointer; font-size:0.78rem; margin-left:auto; }
+.rm-btn:hover { color:var(--coral); }
+.drawer-foot { padding:1.25rem 1.5rem; border-top:1px solid #f0f0f0; }
+.cart-total-row { display:flex; justify-content:space-between; font-weight:700; font-size:1.05rem; margin-bottom:0.9rem; }
+.checkout-btn {
+  width:100%; background:var(--gold); color:var(--dark); border:none;
+  padding:0.9rem; border-radius:10px; font-size:0.95rem; font-weight:700;
+  cursor:pointer; font-family:inherit; transition:opacity 0.2s;
+}
+.checkout-btn:hover { opacity:0.9; }
 
-  .hero-sub{
-    font-size:16px;
-    color:var(--ink-soft);
-    max-width:560px;
-    line-height:1.7;
-    margin-bottom:32px;
-  }
-  .hero-sub b{color:var(--ink); font-weight:700;}
+/* ===== MODAL ===== */
+.modal {
+  position:fixed; inset:0; background:rgba(0,0,0,0.55);
+  z-index:3000; display:none; align-items:center; justify-content:center; padding:1rem;
+}
+.modal.on { display:flex; }
+.modal-box {
+  background:white; border-radius:20px; width:100%; max-width:520px;
+  max-height:92vh; overflow-y:auto; padding:1.75rem;
+}
+.modal-head { display:flex; justify-content:space-between; align-items:center; margin-bottom:1.5rem; }
+.modal-head h3 { font-size:1.15rem; font-weight:700; }
 
-  .hero-cta-row{display:flex; gap:14px; flex-wrap:wrap; align-items:center; margin-bottom:46px;}
-  .btn{
-    font-family:'Space Mono',monospace;
-    font-weight:700;
-    font-size:13px;
-    letter-spacing:0.04em;
-    text-transform:uppercase;
-    padding:14px 26px;
-    border-radius:4px;
-    border:2px solid var(--ink);
-    background:var(--ink);
-    color:var(--paper);
-    cursor:pointer;
-    transition:transform 0.15s ease, box-shadow 0.15s ease;
-    display:inline-flex; align-items:center; gap:8px;
-  }
-  .btn:hover{transform:translateY(-2px); box-shadow:var(--shadow);}
-  .btn:focus-visible{outline:3px solid var(--gold); outline-offset:2px;}
-  .btn.ghost{background:transparent; color:var(--ink);}
-  .btn.gold{background:var(--gold-deep); border-color:var(--gold-deep); color:var(--paper);}
+/* ===== STEPS ===== */
+.steps-bar {
+  display:flex; margin-bottom:2rem; position:relative;
+}
+.steps-bar::before {
+  content:''; position:absolute; top:14px; left:16%; right:16%;
+  height:2px; background:#eeeeee; z-index:0;
+}
+.step-item { flex:1; text-align:center; position:relative; z-index:1; }
+.step-dot {
+  width:30px; height:30px; border-radius:50%; background:#eee; color:#aaa;
+  display:flex; align-items:center; justify-content:center; margin:0 auto 0.4rem;
+  font-size:0.82rem; font-weight:700; transition:all 0.3s;
+}
+.step-item.active .step-dot { background:var(--gold); color:white; }
+.step-item.done .step-dot { background:var(--teal); color:white; }
+.step-lbl { font-size:0.68rem; color:#bbb; }
+.step-item.active .step-lbl { color:var(--gold); font-weight:700; }
 
-  /* Flight strip - signature element preview in hero */
-  .flight-strip{
-    display:flex;
-    align-items:stretch;
-    border:2px solid var(--ink);
-    border-radius:6px;
-    overflow:hidden;
-    max-width:620px;
-    background:var(--paper-2);
-  }
-  .flight-strip .seg{
-    padding:16px 20px;
-    flex:1;
-  }
-  .flight-strip .seg + .seg{border-left:2px dashed var(--line);}
-  .flight-strip .seg-label{
-    font-family:'Space Mono',monospace;
-    font-size:10px;
-    letter-spacing:0.1em;
-    color:var(--ink-soft);
-    text-transform:uppercase;
-    margin-bottom:4px;
-  }
-  .flight-strip .seg-val{
-    font-family:'Archivo Expanded',sans-serif;
-    font-size:18px;
-    font-weight:800;
-  }
-  .flight-strip .seg.gold-bg{background:var(--gold-deep); color:var(--paper);}
-  .flight-strip .seg.gold-bg .seg-label{color:rgba(247,242,232,0.75);}
+/* ===== FORM ===== */
+.fg { margin-bottom:0.9rem; }
+.fl { display:block; font-size:0.8rem; color:#666; font-weight:500; margin-bottom:0.35rem; }
+.fi {
+  width:100%; padding:0.7rem 0.9rem; border:1.5px solid #e8e8e8; border-radius:8px;
+  font-size:0.9rem; font-family:inherit; transition:border-color 0.2s; background:white;
+}
+.fi:focus { outline:none; border-color:var(--gold); }
+.fi-row { display:grid; grid-template-columns:1fr 1fr; gap:0.75rem; }
+.upload-zone {
+  border:2px dashed #e0e0e0; border-radius:12px; padding:1.75rem;
+  text-align:center; cursor:pointer; transition:all 0.2s;
+}
+.upload-zone:hover { border-color:var(--gold); background:var(--gold-light); }
+.upload-zone.loaded { border-color:var(--teal); background:var(--teal-light); }
+.summary-box {
+  background:#f8f8f8; border-radius:10px; padding:1rem; margin-bottom:1rem; font-size:0.84rem;
+}
+.summary-row {
+  display:flex; justify-content:space-between; padding:0.28rem 0;
+  border-bottom:1px solid #f0f0f0;
+}
+.summary-row:last-child { border-bottom:none; }
+.summary-total {
+  display:flex; justify-content:space-between; font-weight:700;
+  font-size:0.95rem; margin-top:0.5rem;
+}
+.btn-row { display:flex; gap:0.75rem; margin-top:1.25rem; }
+.btn-sec {
+  flex:1; padding:0.75rem; border:1.5px solid #ddd; border-radius:10px;
+  background:white; cursor:pointer; font-family:inherit; font-size:0.88rem; color:#555;
+}
+.btn-pri {
+  flex:2; padding:0.75rem; background:var(--gold); color:var(--dark); border:none;
+  border-radius:10px; font-weight:700; cursor:pointer; font-family:inherit; font-size:0.88rem;
+}
+.btn-pri:disabled { opacity:0.6; cursor:not-allowed; }
 
-  /* ===== SECTION HEADERS ===== */
-  .section{padding:56px 0;}
-  .section-head{
-    display:flex;
-    align-items:baseline;
-    justify-content:space-between;
-    gap:20px;
-    margin-bottom:8px;
-    border-bottom:3px solid var(--ink);
-    padding-bottom:14px;
-    flex-wrap:wrap;
-  }
-  .section-head h2{font-size:clamp(26px,4vw,38px); margin:0;}
-  .section-head .count{
-    font-family:'Space Mono',monospace;
-    font-size:13px;
-    color:var(--ink-soft);
-  }
-  .section-note{
-    color:var(--ink-soft);
-    font-size:14px;
-    margin:14px 0 36px;
-    max-width:640px;
-    line-height:1.6;
-  }
+/* ===== AUTH ===== */
+.auth-tabs { display:flex; border-bottom:2px solid #f0f0f0; margin-bottom:1.5rem; }
+.atab {
+  flex:1; padding:0.7rem; text-align:center; cursor:pointer;
+  color:#aaa; font-weight:500; border-bottom:2px solid transparent;
+  margin-bottom:-2px; font-size:0.9rem;
+}
+.atab.on { color:var(--gold); border-bottom-color:var(--gold); }
 
-  /* ===== ITINERARY RAIL ===== */
-  .rail{
-    display:flex;
-    overflow-x:auto;
-    gap:0;
-    padding-bottom:10px;
-    scrollbar-width:thin;
-  }
-  .rail::-webkit-scrollbar{height:6px;}
-  .rail::-webkit-scrollbar-thumb{background:var(--line); border-radius:3px;}
-  .day-card{
-    min-width:230px;
-    flex:0 0 230px;
-    border-right:2px dashed var(--line);
-    padding:0 22px;
-    position:relative;
-  }
-  .day-card:first-child{padding-left:0;}
-  .day-num{
-    font-family:'Archivo Expanded',sans-serif;
-    font-size:13px;
-    color:var(--stamp);
-    letter-spacing:0.08em;
-    margin-bottom:6px;
-  }
-  .day-title{
-    font-family:'Archivo Expanded',sans-serif;
-    font-weight:800;
-    font-size:16px;
-    margin-bottom:14px;
-    line-height:1.3;
-  }
-  .day-stops{list-style:none; margin:0; padding:0;}
-  .day-stops li{
-    font-size:12.5px;
-    color:var(--ink-soft);
-    padding:7px 0;
-    border-top:1px solid var(--line);
-    line-height:1.5;
-  }
-  .day-stops li:first-child{border-top:none;}
-  .day-stops b{color:var(--ink); display:block; font-weight:600; margin-bottom:1px;}
+/* ===== SUCCESS ===== */
+.success-wrap { text-align:center; padding:0.5rem 0; }
+.success-icon { font-size:3.5rem; margin-bottom:0.75rem; }
+.success-wrap h3 { font-size:1.2rem; margin-bottom:0.5rem; }
+.success-wrap p { color:#777; font-size:0.88rem; margin-bottom:1.25rem; }
+.order-card {
+  background:#f8f8f8; border-radius:10px; padding:1rem; text-align:left;
+  font-size:0.83rem; margin-bottom:1.25rem;
+}
+.order-card-row { display:flex; justify-content:space-between; padding:0.25rem 0; color:#666; }
+.order-card-row strong { color:var(--dark); }
+.badge-sync-ok { display:inline-block; background:#D1FAE5; color:#065F46; padding:0.2rem 0.6rem; border-radius:50px; font-size:0.72rem; font-weight:700; margin-top:0.4rem; }
+.badge-sync-local { display:inline-block; background:#FEF3C7; color:#92400E; padding:0.2rem 0.6rem; border-radius:50px; font-size:0.72rem; font-weight:700; margin-top:0.4rem; }
 
-  /* ===== PRODUCT GRID — LUGGAGE TAGS ===== */
-  .grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fill, minmax(270px,1fr));
-    gap:22px;
-  }
-  .tag{
-    background:var(--paper);
-    border:2px solid var(--ink);
-    border-radius:8px;
-    position:relative;
-    padding:20px 20px 22px;
-    cursor:pointer;
-    transition:transform 0.18s ease, box-shadow 0.18s ease;
-    display:flex;
-    flex-direction:column;
-    gap:12px;
-  }
-  .tag:hover{transform:translateY(-4px) rotate(-0.4deg); box-shadow:var(--shadow);}
-  .tag.selected{
-    background:#FBF6E9;
-    box-shadow:0 0 0 3px var(--gold-deep) inset;
-  }
-  .tag-hole{
-    position:absolute;
-    top:18px; right:18px;
-    width:16px; height:16px;
-    border-radius:50%;
-    border:2px solid var(--ink);
-    background:var(--paper);
-  }
-  .tag-hole::after{
-    content:"";
-    position:absolute; inset:3px;
-    border-radius:50%;
-    background:var(--paper);
-    box-shadow:inset 0 0 0 1px var(--line);
-  }
-  .tag-rank{
-    font-family:'Space Mono',monospace;
-    font-size:11px;
-    color:var(--gold-deep);
-    letter-spacing:0.08em;
-  }
-  .tag-name{
-    font-family:'Archivo Expanded',sans-serif;
-    font-weight:800;
-    font-size:18px;
-    line-height:1.25;
-    padding-right:24px;
-  }
-  .tag-variant{
-    font-size:12.5px;
-    color:var(--ink-soft);
-    line-height:1.5;
-  }
-  .tag-divider{
-    border-top:2px dashed var(--line);
-    margin:2px 0;
-  }
-  .tag-price-row{
-    display:flex;
-    align-items:baseline;
-    justify-content:space-between;
-  }
-  .tag-price{
-    font-family:'Archivo Expanded',sans-serif;
-    font-size:26px;
-    font-weight:800;
-    color:var(--stamp);
-  }
-  .tag-price small{font-size:13px; font-family:'Space Mono',monospace; color:var(--ink-soft); font-weight:400;}
-  .tag-stars{font-size:12px; letter-spacing:1px;}
-  .tag-blurb{
-    font-size:12px;
-    color:var(--ink-soft);
-    line-height:1.55;
-    min-height:36px;
-  }
-  .tag-add{
-    font-family:'Space Mono',monospace;
-    font-size:12px;
-    font-weight:700;
-    text-transform:uppercase;
-    letter-spacing:0.04em;
-    border:2px solid var(--ink);
-    border-radius:4px;
-    padding:10px;
-    text-align:center;
-    background:var(--ink);
-    color:var(--paper);
-    transition:background 0.15s, color 0.15s;
-  }
-  .tag.selected .tag-add{background:var(--jade); border-color:var(--jade); color:var(--paper);}
-  .tag-add:focus-visible{outline:3px solid var(--gold); outline-offset:2px;}
+/* ===== ORDER HISTORY ===== */
+.oh-item {
+  border:1px solid #eeeeee; border-radius:12px; padding:0.9rem; margin-bottom:0.65rem;
+}
+.oh-top { display:flex; justify-content:space-between; align-items:center; margin-bottom:0.4rem; }
+.oh-id { font-size:0.75rem; color:#bbb; }
+.oh-products { font-size:0.85rem; font-weight:600; margin-bottom:0.3rem; color:var(--dark); }
+.oh-bottom { display:flex; justify-content:space-between; font-size:0.8rem; color:#aaa; }
+.oh-total { color:var(--gold); font-weight:700; }
+.status-tag {
+  display:inline-block; padding:0.18rem 0.55rem; border-radius:50px; font-size:0.68rem; font-weight:700;
+}
+.s-pending { background:#FEF3C7; color:#92400E; }
+.s-paid { background:#D1FAE5; color:#065F46; }
+.s-shipped { background:#DBEAFE; color:#1E40AF; }
 
-  /* ===== ORDER FORM — BOARDING PASS ===== */
-  .boarding-section{
-    background:var(--ink);
-    padding:64px 0 80px;
-    position:relative;
-  }
-  .boarding-section .section-head{border-bottom-color:rgba(247,242,232,0.25);}
-  .boarding-section .section-head h2{color:var(--paper);}
-  .boarding-section .section-head .count{color:rgba(247,242,232,0.6);}
-  .boarding-section .section-note{color:rgba(247,242,232,0.65);}
+/* ===== FAQ ===== */
+.faq-bg { background:var(--dark); }
+.faq-wrap { max-width:760px; margin:0 auto; padding:5rem 2rem; }
+.faq-title { text-align:center; color:white; font-size:1.9rem; margin-bottom:3rem; }
+.faq-item {
+  background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.09);
+  border-radius:12px; margin-bottom:0.75rem; overflow:hidden;
+}
+.faq-q {
+  padding:1.1rem 1.4rem; color:white; cursor:pointer;
+  display:flex; justify-content:space-between; align-items:center; font-size:0.9rem; font-weight:500;
+}
+.faq-q:hover { background:rgba(255,255,255,0.04); }
+.faq-arrow { color:var(--gold); transition:transform 0.3s; }
+.faq-item.open .faq-arrow { transform:rotate(180deg); }
+.faq-a { max-height:0; overflow:hidden; transition:max-height 0.3s ease; }
+.faq-item.open .faq-a { max-height:300px; }
+.faq-a p { padding:0 1.4rem 1.1rem; color:rgba(255,255,255,0.62); font-size:0.84rem; line-height:1.8; }
 
-  .pass{
-    display:grid;
-    grid-template-columns:1fr 230px;
-    background:var(--paper);
-    border-radius:10px;
-    overflow:hidden;
-    box-shadow:0 20px 50px rgba(0,0,0,0.35);
-  }
-  @media (max-width:680px){
-    .pass{grid-template-columns:1fr;}
-  }
-  .pass-main{padding:32px 34px;}
-  .pass-stub{
-    background:var(--gold-deep);
-    color:var(--paper);
-    padding:32px 26px;
-    position:relative;
-    display:flex;
-    flex-direction:column;
-    justify-content:space-between;
-  }
-  @media (max-width:680px){
-    .pass-stub{order:-1; flex-direction:row; flex-wrap:wrap; gap:14px;}
-  }
-  .perforation{
-    position:absolute;
-    left:0; top:0; bottom:0;
-    width:0;
-    border-left:3px dashed var(--paper);
-    opacity:0.5;
-  }
-  @media (max-width:680px){
-    .perforation{
-      left:0; right:0; top:auto; bottom:0; width:auto; height:0;
-      border-left:none; border-top:3px dashed var(--paper);
-    }
-  }
+/* ===== FOOTER ===== */
+footer {
+  background:var(--dark); color:rgba(255,255,255,0.45);
+  text-align:center; padding:2.5rem 2rem; font-size:0.82rem;
+}
+footer strong { color:rgba(255,255,255,0.7); }
 
-  .pass-row{display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; margin-bottom:18px;}
-  .pass-field{flex:1; min-width:140px;}
-  .pass-field label{
-    display:block;
-    font-family:'Space Mono',monospace;
-    font-size:10.5px;
-    letter-spacing:0.1em;
-    text-transform:uppercase;
-    color:var(--ink-soft);
-    margin-bottom:6px;
-  }
-  .pass-field input, .pass-field select, .pass-field textarea{
-    width:100%;
-    font-family:'Noto Sans SC','Space Mono',monospace;
-    font-size:14px;
-    padding:10px 12px;
-    border:2px solid var(--ink);
-    border-radius:4px;
-    background:var(--paper);
-    color:var(--ink);
-  }
-  .pass-field input:focus, .pass-field select:focus, .pass-field textarea:focus{
-    outline:3px solid var(--gold);
-    outline-offset:1px;
-  }
-  .pass-field textarea{resize:vertical; min-height:64px;}
+/* ===== SETUP GUIDE ===== */
+.setup-guide {
+  max-width:760px; margin:2rem auto 0;
+  background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.1);
+  border-radius:12px; text-align:left; overflow:hidden;
+}
+.setup-guide summary {
+  cursor:pointer; padding:1rem 1.4rem; color:var(--gold); font-size:0.88rem; font-weight:600;
+  list-style:none; display:flex; align-items:center; gap:0.4rem;
+}
+.setup-guide summary::-webkit-details-marker { display:none; }
+.setup-guide-body { padding:0 1.4rem 1.4rem; }
+.setup-steps { color:rgba(255,255,255,0.6); font-size:0.82rem; line-height:2; margin-bottom:1rem; }
+.setup-steps code { background:rgba(255,255,255,0.1); padding:0.1rem 0.4rem; border-radius:4px; color:var(--gold); font-size:0.8rem; }
+.script-pre {
+  background:#0d1117; color:#c9d1d9; padding:1rem 1.2rem; border-radius:8px;
+  overflow-x:auto; font-size:0.72rem; line-height:1.6; white-space:pre; font-family:monospace;
+  max-height:300px; overflow-y:auto;
+}
+.url-row { display:flex; gap:0.5rem; margin-top:1rem; }
+.url-input {
+  flex:1; padding:0.55rem 0.8rem; border:1px solid rgba(255,255,255,0.15);
+  border-radius:6px; background:rgba(255,255,255,0.07); color:white;
+  font-size:0.82rem; font-family:inherit;
+}
+.url-input::placeholder { color:rgba(255,255,255,0.3); }
+.url-save {
+  background:var(--teal); color:white; border:none; padding:0.55rem 1rem;
+  border-radius:6px; cursor:pointer; font-size:0.82rem; font-family:inherit;
+}
 
-  .order-lines{margin:20px 0; border-top:2px dashed var(--line); padding-top:16px;}
-  .order-line{
-    display:flex; justify-content:space-between; align-items:center;
-    font-size:13.5px;
-    padding:8px 0;
-    gap:10px;
-  }
-  .order-line .qty-ctrl{display:flex; align-items:center; gap:8px;}
-  .order-line button{
-    width:24px;height:24px;
-    border:1.5px solid var(--ink);
-    background:var(--paper);
-    border-radius:4px;
-    font-family:'Space Mono',monospace;
-    cursor:pointer;
-    line-height:1;
-  }
-  .order-line button:focus-visible{outline:2px solid var(--gold); outline-offset:1px;}
-  .order-empty{
-    color:var(--ink-soft);
-    font-size:13px;
-    padding:18px 0;
-    text-align:center;
-    border:1.5px dashed var(--line);
-    border-radius:6px;
-  }
+/* ===== TOAST ===== */
+.toast {
+  position:fixed; bottom:2rem; left:50%; transform:translateX(-50%) translateY(80px);
+  background:var(--dark); color:white; padding:0.75rem 1.75rem; border-radius:50px;
+  z-index:9000; transition:transform 0.3s; font-size:0.88rem;
+  box-shadow:0 6px 24px rgba(0,0,0,0.3); white-space:nowrap;
+}
+.toast.show { transform:translateX(-50%) translateY(0); }
 
-  .pass-stub .stub-label{
-    font-family:'Space Mono',monospace;
-    font-size:10px;
-    letter-spacing:0.12em;
-    text-transform:uppercase;
-    opacity:0.8;
-    margin-bottom:4px;
-  }
-  .pass-stub .stub-val{
-    font-family:'Archivo Expanded',sans-serif;
-    font-weight:800;
-    font-size:15px;
-    margin-bottom:18px;
-  }
-  .pass-stub .stub-total-label{font-size:11px; opacity:0.85; margin-bottom:2px;}
-  .pass-stub .stub-total{
-    font-family:'Archivo Expanded',sans-serif;
-    font-size:34px;
-    font-weight:800;
-  }
-  .barcode{
-    margin-top:18px;
-    height:34px;
-    background:repeating-linear-gradient(90deg, var(--paper) 0 2px, transparent 2px 5px, var(--paper) 5px 6px, transparent 6px 9px);
-    opacity:0.85;
-  }
+/* ===== USER DROPDOWN ===== */
+.user-menu { position:relative; }
+.udrop {
+  position:absolute; top:calc(100% + 8px); right:0; background:white;
+  border-radius:10px; box-shadow:0 6px 30px rgba(0,0,0,0.15); min-width:150px;
+  padding:0.4rem 0; display:none;
+}
+.udrop.on { display:block; }
+.udrop-item { padding:0.6rem 1.1rem; font-size:0.82rem; cursor:pointer; color:var(--dark); }
+.udrop-item:hover { background:var(--cream); }
+.udrop-item.danger { color:var(--coral); }
 
-  .submit-btn{
-    width:100%;
-    margin-top:8px;
-    background:var(--stamp);
-    border-color:var(--stamp);
-    justify-content:center;
-    font-size:14px;
-    padding:16px;
-  }
-  .submit-btn:hover{background:#962f21; border-color:#962f21;}
+/* ===== SCROLL FADE ===== */
+.fade { opacity:0; transform:translateY(18px); transition:opacity 0.5s, transform 0.5s; }
+.fade.in { opacity:1; transform:translateY(0); }
 
-  .form-note{
-    font-size:12px;
-    color:var(--ink-soft);
-    margin-top:14px;
-    line-height:1.6;
-  }
-
-  /* ===== WELCOME NOTICE ===== */
-  .notice{
-    background:var(--paper);
-    border:2px solid var(--paper);
-    border-left:6px solid var(--stamp);
-    border-radius:6px;
-    padding:22px 24px;
-    margin-bottom:32px;
-    box-shadow:var(--shadow);
-  }
-  .notice-title{
-    font-family:'Archivo Expanded',sans-serif;
-    font-weight:800;
-    font-size:16px;
-    margin-bottom:10px;
-    color:var(--ink);
-  }
-  .notice p{
-    font-size:13.5px;
-    color:var(--ink-soft);
-    line-height:1.75;
-    margin:0 0 8px;
-  }
-  .notice p:last-child{margin-bottom:0;}
-  .notice .warn{
-    color:var(--stamp);
-    font-weight:700;
-  }
-  .notice .contact-line{
-    display:inline-flex;
-    gap:14px;
-    flex-wrap:wrap;
-    margin-top:10px;
-  }
-  .notice .contact-line a{
-    font-family:'Space Mono',monospace;
-    font-size:12.5px;
-    font-weight:700;
-    color:var(--gold-deep);
-    text-decoration:none;
-    border-bottom:1.5px solid var(--gold-deep);
-    padding-bottom:1px;
-  }
-  .notice .contact-line a:hover{color:var(--stamp); border-color:var(--stamp);}
-
-  /* ===== TERMS & CONDITIONS ===== */
-  .terms{
-    background:var(--paper);
-    border-radius:6px;
-    padding:26px 28px;
-    margin-top:36px;
-    position:relative;
-  }
-  .terms::before{
-    content:"条款";
-    position:absolute;
-    top:-14px; left:24px;
-    background:var(--ink);
-    color:var(--paper);
-    font-family:'Space Mono',monospace;
-    font-size:10.5px;
-    letter-spacing:0.1em;
-    padding:4px 12px;
-    border-radius:3px;
-  }
-  .terms-head{
-    font-family:'Archivo Expanded',sans-serif;
-    font-weight:800;
-    font-size:15px;
-    margin:6px 0 16px;
-    display:flex;
-    align-items:center;
-    gap:8px;
-  }
-  .terms ol{
-    margin:0;
-    padding:0;
-    list-style:none;
-    counter-reset:term;
-  }
-  .terms li{
-    counter-increment:term;
-    position:relative;
-    padding:14px 0 14px 38px;
-    border-top:1.5px dashed var(--line);
-    font-size:13px;
-    line-height:1.65;
-    color:var(--ink-soft);
-  }
-  .terms li:first-child{border-top:none;}
-  .terms li::before{
-    content:counter(term);
-    position:absolute;
-    left:0; top:14px;
-    width:24px; height:24px;
-    border-radius:50%;
-    background:var(--gold-deep);
-    color:var(--paper);
-    font-family:'Space Mono',monospace;
-    font-size:12px;
-    font-weight:700;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-  }
-  .terms li b{color:var(--ink); display:block; margin-bottom:2px; font-size:13.5px;}
-  .terms li .en{
-    font-family:'Space Mono',monospace;
-    font-size:11.5px;
-    color:var(--ink-soft);
-    opacity:0.85;
-    display:block;
-    margin-top:3px;
-  }
-
-
-  /* ===== SHIPPING TABLE ===== */
-  .ship-table{
-    width:100%;
-    border-collapse:collapse;
-    font-size:13.5px;
-  }
-  .ship-table th, .ship-table td{
-    text-align:left;
-    padding:12px 14px;
-    border-bottom:1.5px solid var(--line);
-  }
-  .ship-table th{
-    font-family:'Space Mono',monospace;
-    font-size:11px;
-    letter-spacing:0.06em;
-    text-transform:uppercase;
-    color:var(--ink-soft);
-    border-bottom:2px solid var(--ink);
-  }
-  .ship-table tr:last-child td{border-bottom:none;}
-  .ship-table td.fast{color:var(--jade); font-weight:600;}
-
-  /* ===== FAQ ===== */
-  .faq-item{
-    border-bottom:1.5px solid var(--line);
-    padding:18px 0;
-  }
-  .faq-item summary{
-    cursor:pointer;
-    font-family:'Archivo Expanded',sans-serif;
-    font-weight:700;
-    font-size:15px;
-    list-style:none;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:12px;
-  }
-  .faq-item summary::-webkit-details-marker{display:none;}
-  .faq-item summary::after{
-    content:"+";
-    font-size:22px;
-    color:var(--gold-deep);
-    flex-shrink:0;
-    transition:transform 0.2s ease;
-  }
-  .faq-item[open] summary::after{transform:rotate(45deg);}
-  .faq-item p{
-    margin:12px 0 0;
-    font-size:13.5px;
-    color:var(--ink-soft);
-    line-height:1.7;
-  }
-
-  /* ===== FOOTER ===== */
-  footer{
-    padding:40px 0 50px;
-    text-align:center;
-    font-family:'Space Mono',monospace;
-    font-size:11.5px;
-    color:var(--ink-soft);
-    border-top:2px solid var(--ink);
-  }
-  footer .stamp-mark{
-    display:inline-block;
-    color:var(--stamp);
-    border:2px solid var(--stamp);
-    border-radius:50%;
-    width:46px; height:46px;
-    line-height:42px;
-    font-family:'Archivo Expanded',sans-serif;
-    font-weight:800;
-    font-size:11px;
-    transform:rotate(-8deg);
-    margin-bottom:14px;
-  }
-
-  /* toast */
-  .toast{
-    position:fixed;
-    bottom:24px;
-    left:50%;
-    transform:translateX(-50%) translateY(20px);
-    background:var(--ink);
-    color:var(--paper);
-    padding:14px 24px;
-    border-radius:6px;
-    font-family:'Space Mono',monospace;
-    font-size:13px;
-    opacity:0;
-    pointer-events:none;
-    transition:opacity 0.25s ease, transform 0.25s ease;
-    z-index:50;
-    box-shadow:var(--shadow);
-  }
-  .toast.show{opacity:1; transform:translateX(-50%) translateY(0);}
-
-  @media (max-width:680px){
-    .hero{padding:44px 0 28px;}
-    .flight-strip{flex-direction:column;}
-    .flight-strip .seg + .seg{border-left:none; border-top:2px dashed var(--line);}
-  }
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){
+  nav { padding:0.8rem 1rem; }
+  .nav-links { display:none; }
+  .cart-drawer { width:100%; right:-100%; }
+  .fi-row { grid-template-columns:1fr; }
+  .modal { align-items:flex-end; padding:0; }
+  .modal-box { border-radius:20px 20px 0 0; max-height:95vh; }
+  .section { padding:3.5rem 1.25rem; }
+}
 </style>
 </head>
 <body>
 
-<div class="top-strip">
-  <div class="marquee">
-    <span><span class="dot"></span>泰够荔迪好买 · 曼谷开团 5天4夜直采</span>
-    <span><span class="dot"></span>实拍实买 · 现货直发</span>
-    <span><span class="dot"></span>Day 3 开团 · 数量有限</span>
-    <span><span class="dot"></span>泰够荔迪好买 · 曼谷开团 5天4夜直采</span>
-    <span><span class="dot"></span>实拍实买 · 现货直发</span>
-    <span><span class="dot"></span>Day 3 开团 · 数量有限</span>
+<!-- Toast -->
+<div class="toast" id="toast"></div>
+
+<!-- Notice Bar -->
+<div class="notice-bar">🇹🇭 3天泰国精选团购开团中 · 截止 2026年6月30日 · 曼谷亲自采购，品质保证</div>
+
+<!-- Nav -->
+<nav>
+  <div class="logo">🇹🇭 泰够荔迪好买</div>
+  <ul class="nav-links">
+    <li><a href="#products">团购产品</a></li>
+    <li><a href="#faq">常见问题</a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="user-menu" id="userMenu">
+      <button class="user-btn" id="userBtn" onclick="handleUserBtn()">登录 / 注册</button>
+      <div class="udrop" id="udrop">
+        <div class="udrop-item" onclick="openOrders()">📦 我的订单</div>
+        <div class="udrop-item" onclick="openEditProfile()">✏️ 编辑资料</div>
+        <div class="udrop-item danger" onclick="doLogout()">退出登录</div>
+      </div>
+    </div>
+    <button class="cart-btn" onclick="openCart()" title="购物车">
+      🛒<div class="cart-count" id="cartCount">0</div>
+    </button>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero" id="home">
+  <div style="position:relative;z-index:1;max-width:680px">
+    <div class="hero-badge">🛍️ 限时团购 · 亲自飞去帮你买</div>
+    <h1>泰够<span>荔迪</span>好买<br>我们亲自飞去买</h1>
+    <p class="hero-sub">3天精选 · 9大品牌 · 曼谷最火网红好物<br>人肉代购，正品直供，限量截止</p>
+    <div class="countdown" id="countdown">
+      <div class="cd-item"><span class="cd-num" id="cdD">--</span><span class="cd-lbl">天</span></div>
+      <div class="cd-item"><span class="cd-num" id="cdH">--</span><span class="cd-lbl">时</span></div>
+      <div class="cd-item"><span class="cd-num" id="cdM">--</span><span class="cd-lbl">分</span></div>
+      <div class="cd-item"><span class="cd-num" id="cdS">--</span><span class="cd-lbl">秒</span></div>
+    </div>
+    <a href="#products" class="cta-btn">立即选购 →</a>
+    <div class="hero-flags" style="margin-top:2rem;font-size:0.78rem;color:rgba(255,255,255,0.3)">
+      Bio Treatment · Bloc B · Slip to Sleep · Sleeping Cloud · Little Bunny · Mo-ya · Saus · Sukonta · Luna on Heel
+    </div>
+  </div>
+</section>
+
+<!-- Products -->
+<section class="products-bg" id="products">
+  <div class="section">
+    <div class="section-title fade">
+      <h2>🛍️ 团购产品</h2>
+      <p>全部来自曼谷实体门店 · 我们亲自挑选采购 · 正品保障</p>
+    </div>
+    <div class="products-grid" id="productsGrid"></div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-bg" id="faq">
+  <div class="faq-wrap">
+    <h2 class="faq-title">常见问题 FAQ</h2>
+    <div id="faqList"></div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p><strong>🇹🇭 泰够荔迪好买团购</strong></p>
+  <p style="margin-top:0.4rem">联系我们：微信 / WhatsApp · 下单后24小时内确认</p>
+
+  <!-- Admin Setup Guide -->
+  <details class="setup-guide" id="setupGuide">
+    <summary>⚙️ 管理员设置：连接 Google Sheets 自动同步</summary>
+    <div class="setup-guide-body">
+      <div class="setup-steps">
+        1. 打开你的 Google Sheets → 点击菜单「扩展程序」→「Apps Script」<br>
+        2. 把下方代码完整粘贴进去（<code>YOUR_SHEET_ID</code> 已预填你的表格ID）<br>
+        3. 点击「部署」→「新建部署」→ 类型选「<code>Web 应用</code>」<br>
+        4. 执行身份选「<code>我</code>」，访问权限选「<code>所有人</code>」→ 点击部署<br>
+        5. 复制生成的 URL，粘贴到下方保存 ✅
+      </div>
+      <pre class="script-pre" id="scriptCode">// ======================================================
+// 泰够荔迪好买 · Google Apps Script 订单同步脚本
+// 粘贴到 Apps Script 编辑器，然后部署为 Web 应用
+// ======================================================
+
+const SHEET_ID = '1FnwCCXp-q5-akrQq3hghTkSG76GhllDYjXYrUvF1LMc';
+const SHEET_NAME = '网站订单'; // 会自动创建此 sheet
+
+function doPost(e) {
+  try {
+    var data = JSON.parse(e.postData.contents);
+    var ss = SpreadsheetApp.openById(SHEET_ID);
+    var sheet = ss.getSheetByName(SHEET_NAME);
+
+    // 自动创建 sheet（如不存在）
+    if (!sheet) {
+      sheet = ss.insertSheet(SHEET_NAME);
+      var headers = ['#','品牌','购买人姓名','联系方式','收货地址',
+                     '产品/款式','颜色','尺码','数量','单价(RM)',
+                     '小计(RM)','备注','付款状态','付款金额',
+                     '付款参考号','发货状态','下单时间'];
+      sheet.appendRow(headers);
+      sheet.setFrozenRows(1);
+      sheet.getRange(1,1,1,headers.length)
+           .setBackground('#1C1C2E').setFontColor('#C8963E').setFontWeight('bold');
+    }
+
+    var now = Utilities.formatDate(new Date(), 'Asia/Kuala_Lumpur', 'yyyy-MM-dd HH:mm:ss');
+    var baseRow = Math.max(sheet.getLastRow(), 1);
+
+    // 每个产品写一行
+    data.items.forEach(function(item, idx) {
+      sheet.appendRow([
+        baseRow + idx,           // #
+        item.brand,              // 品牌
+        data.name,               // 购买人姓名
+        data.phone,              // 联系方式
+        data.address,            // 收货地址
+        item.product,            // 产品/款式
+        item.color  || '',       // 颜色
+        item.size   || '',       // 尺码
+        item.qty,                // 数量
+        item.price,              // 单价(RM)
+        item.subtotal,           // 小计(RM)
+        data.notes  || '',       // 备注
+        '待确认',                 // 付款状态
+        data.paymentAmount,      // 付款金额
+        data.paymentRef || '',   // 付款参考号
+        '待发货',                 // 发货状态
+        now                      // 下单时间
+      ]);
+    });
+
+    // 可选：保存付款截图到 Google Drive（需先创建「团购付款截图」文件夹）
+    if (data.receiptBase64 && data.receiptBase64.indexOf(',') > -1) {
+      try {
+        var folders = DriveApp.getFoldersByName('团购付款截图');
+        if (folders.hasNext()) {
+          var folder = folders.next();
+          var raw = data.receiptBase64.split(',')[1];
+          var blob = Utilities.newBlob(
+            Utilities.base64Decode(raw), 'image/jpeg',
+            data.name + '_' + (data.paymentRef || now) + '.jpg'
+          );
+          folder.createFile(blob);
+        }
+      } catch(imgErr) { /* 文件夹不存在则跳过 */ }
+    }
+
+    return ContentService
+      .createTextOutput(JSON.stringify({ success:true, rows: data.items.length }))
+      .setMimeType(ContentService.MimeType.JSON);
+
+  } catch(err) {
+    return ContentService
+      .createTextOutput(JSON.stringify({ success:false, error: err.toString() }))
+      .setMimeType(ContentService.MimeType.JSON);
+  }
+}
+
+function doGet(e) {
+  return ContentService.createTextOutput('泰够荔迪好买 · 订单同步服务运行中 ✅');
+}</pre>
+      <div class="url-row">
+        <input type="url" class="url-input" id="scriptUrlInput"
+               placeholder="https://script.google.com/macros/s/...">
+        <button class="url-save" onclick="saveScriptUrl()">保存</button>
+      </div>
+      <p style="color:rgba(255,255,255,0.35);font-size:0.75rem;margin-top:0.5rem">
+        保存后，每次有人结账，订单数据会自动写入你的「网站订单」sheet。
+      </p>
+    </div>
+  </details>
+</footer>
+
+<!-- Cart Overlay -->
+<div class="overlay" id="overlay" onclick="closeCart()"></div>
+
+<!-- Cart Drawer -->
+<div class="cart-drawer" id="cartDrawer">
+  <div class="drawer-head">
+    <h3>🛒 购物车</h3>
+    <button class="x-btn" onclick="closeCart()">×</button>
+  </div>
+  <div class="cart-list" id="cartList"></div>
+  <div class="drawer-foot">
+    <div class="cart-total-row">
+      <span>合计（运费另计）</span>
+      <span id="cartTotal">RM 0.00</span>
+    </div>
+    <button class="checkout-btn" onclick="startCheckout()">立即结账 →</button>
   </div>
 </div>
 
-<header class="wrap hero">
-  <div class="hero-tag"><span class="pulse"></span>OPEN GROUP BUY · 现正开团</div>
-  <h1><span class="gold">泰够荔迪</span>好买<br>我们<span class="accent">亲自</span>飞去买</h1>
-  <p class="hero-sub">从 Siam 到 Icon Siam，从 7-11 到 The Market BKK —— <b>5 天 4 夜</b>实地采购，每一款都试穿试用、拍给你看。下单后人在曼谷直接帮你扫货，行李箱直接扛回来。</p>
-  <div class="hero-cta-row">
-    <a href="#products" class="btn">查看 9 款产品 ↓</a>
-    <a href="#order" class="btn ghost">直接下单</a>
+<!-- Auth Modal -->
+<div class="modal" id="authModal">
+  <div class="modal-box">
+    <div class="modal-head">
+      <h3 id="authTitle">登录 / 注册</h3>
+      <button class="x-btn" onclick="closeModal('authModal')">×</button>
+    </div>
+    <div class="auth-tabs">
+      <div class="atab on" id="tabLogin" onclick="switchTab('login')">登录</div>
+      <div class="atab" id="tabReg" onclick="switchTab('reg')">注册</div>
+    </div>
+    <div id="loginPane">
+      <div class="fg">
+        <label class="fl">手机号码 / 微信号</label>
+        <input class="fi" id="loginId" placeholder="请输入登录账号">
+      </div>
+      <button class="btn-pri" style="width:100%;margin-top:0.5rem" onclick="doLogin()">登录</button>
+      <p style="text-align:center;margin-top:0.9rem;font-size:0.78rem;color:#aaa">
+        还没有账号？<a href="#" style="color:var(--gold)" onclick="switchTab('reg');return false">立即注册</a>
+      </p>
+    </div>
+    <div id="regPane" style="display:none">
+      <div class="fi-row">
+        <div class="fg"><label class="fl">姓名 *</label><input class="fi" id="regName" placeholder="你的姓名"></div>
+        <div class="fg"><label class="fl">手机号码 *</label><input class="fi" id="regPhone" placeholder="手机号码"></div>
+      </div>
+      <div class="fg"><label class="fl">微信号</label><input class="fi" id="regWechat" placeholder="微信号（方便联系）"></div>
+      <div class="fg"><label class="fl">收货地址</label><textarea class="fi" id="regAddr" rows="2" placeholder="省/市/区/详细地址"></textarea></div>
+      <button class="btn-pri" style="width:100%;margin-top:0.5rem" onclick="doRegister()">注册账号</button>
+    </div>
   </div>
-  <div class="flight-strip">
-    <div class="seg">
-      <div class="seg-label">Route 路线</div>
-      <div class="seg-val">KUL → BKK</div>
+</div>
+
+<!-- Checkout Modal -->
+<div class="modal" id="checkoutModal">
+  <div class="modal-box">
+    <!-- Steps -->
+    <div class="steps-bar" id="stepsBar">
+      <div class="step-item active" id="st1"><div class="step-dot">1</div><div class="step-lbl">确认信息</div></div>
+      <div class="step-item" id="st2"><div class="step-dot">2</div><div class="step-lbl">上传付款</div></div>
+      <div class="step-item" id="st3"><div class="step-dot">3</div><div class="step-lbl">完成</div></div>
     </div>
-    <div class="seg">
-      <div class="seg-label">Duration 行程</div>
-      <div class="seg-val">5D4N</div>
+
+    <!-- Step 1 -->
+    <div id="ckStep1">
+      <div class="modal-head" style="margin-bottom:1rem">
+        <h3>确认订单信息</h3>
+        <button class="x-btn" onclick="closeModal('checkoutModal')">×</button>
+      </div>
+      <div id="orderSummary" class="summary-box"></div>
+      <div class="fi-row">
+        <div class="fg"><label class="fl">姓名 *</label><input class="fi" id="ckName" placeholder="你的姓名"></div>
+        <div class="fg"><label class="fl">手机 / 微信 *</label><input class="fi" id="ckPhone" placeholder="联系方式"></div>
+      </div>
+      <div class="fg"><label class="fl">收货地址 *</label><textarea class="fi" id="ckAddr" rows="2" placeholder="省/市/区/详细地址/门牌号"></textarea></div>
+      <div class="fg"><label class="fl">备注（颜色/尺码/其他）</label><textarea class="fi" id="ckNotes" rows="2" placeholder="如需指定颜色尺码，请在此注明"></textarea></div>
+      <div class="btn-row">
+        <button class="btn-sec" onclick="closeModal('checkoutModal')">取消</button>
+        <button class="btn-pri" onclick="toStep2()">下一步 →</button>
+      </div>
     </div>
-    <div class="seg gold-bg">
-      <div class="seg-label">Open / Close</div>
-      <div class="seg-val">Day 3 开团</div>
+
+    <!-- Step 2 -->
+    <div id="ckStep2" style="display:none">
+      <div class="modal-head" style="margin-bottom:1rem">
+        <h3>上传付款截图</h3>
+        <button class="x-btn" onclick="closeModal('checkoutModal')">×</button>
+      </div>
+      <div class="summary-box" style="display:flex;justify-content:space-between;align-items:center">
+        <span style="color:#666;font-size:0.88rem">应付金额（产品）</span>
+        <strong id="ckDue" style="color:var(--gold);font-size:1.2rem">RM 0</strong>
+      </div>
+      <p style="font-size:0.78rem;color:#aaa;margin:-0.3rem 0 1rem">
+        运费按重量另计，我们会联系你确认。付款完成后请上传截图。
+      </p>
+      <div class="fg">
+        <label class="fl">付款截图 *</label>
+        <div class="upload-zone" id="uploadZone" onclick="document.getElementById('receiptInput').click()">
+          <div id="upPlaceholder">
+            <div style="font-size:2rem;margin-bottom:0.4rem">📷</div>
+            <div style="font-size:0.84rem;color:#aaa">点击上传付款截图</div>
+            <div style="font-size:0.73rem;color:#ccc;margin-top:0.2rem">JPG / PNG · 最大 5MB</div>
+          </div>
+          <div id="upPreview" style="display:none">
+            <img id="receiptImg" style="max-height:140px;border-radius:8px;margin-bottom:0.4rem">
+            <div style="font-size:0.8rem;color:var(--teal)">✅ 截图已上传</div>
+          </div>
+        </div>
+        <input type="file" id="receiptInput" accept="image/*" style="display:none" onchange="handleReceipt(event)">
+      </div>
+      <div class="fg">
+        <label class="fl">付款参考号（转账流水后4位）</label>
+        <input class="fi" id="payRef" placeholder="例如：5678">
+      </div>
+      <div class="btn-row">
+        <button class="btn-sec" onclick="toStep1()">← 返回</button>
+        <button class="btn-pri" id="submitBtn" onclick="submitOrder()">提交订单 ✓</button>
+      </div>
+    </div>
+
+    <!-- Step 3 -->
+    <div id="ckStep3" style="display:none">
+      <div class="success-wrap">
+        <div class="success-icon">🎉</div>
+        <h3>订单提交成功！</h3>
+        <p>我们会在 24 小时内通过你的联系方式确认订单。<br>请保持微信 / 手机畅通。</p>
+        <div class="order-card" id="successInfo"></div>
+        <button class="cta-btn" onclick="closeModal('checkoutModal');resetCart()">关闭</button>
+      </div>
     </div>
   </div>
-</header>
+</div>
 
-<main>
-
-  <!-- ITINERARY -->
-  <section class="section wrap" id="itinerary">
-    <div class="section-head">
-      <h2>实地行程</h2>
-      <span class="count">5 DAYS / 9 STOPS</span>
+<!-- Order History Modal -->
+<div class="modal" id="ordersModal">
+  <div class="modal-box">
+    <div class="modal-head">
+      <h3>📦 我的订单</h3>
+      <button class="x-btn" onclick="closeModal('ordersModal')">×</button>
     </div>
-    <p class="section-note">每一款产品，我们都到品牌门店现场实拍、当面确认尺码和现货 —— 不是网上随便找图就开团。</p>
-    <div class="rail">
-      <div class="day-card">
-        <div class="day-num">DAY 1 ✈️ 抵达</div>
-        <div class="day-title">机场直冲购物区</div>
-        <ul class="day-stops">
-          <li><b>素万那普机场</b>抵达，开箱拍摄起拍</li>
-          <li><b>Siam / Central World</b><br>Slip to Sleep、Sleeping Cloud 试穿实拍</li>
-        </ul>
-      </div>
-      <div class="day-card">
-        <div class="day-num">DAY 2 📦 主力扫货</div>
-        <div class="day-title">一天跑 7 个品牌门店</div>
-        <ul class="day-stops">
-          <li><b>The Market BKK</b> — Little Bunny Brick Bag 全色号</li>
-          <li><b>Central Chitlom</b> — Bloc B Shoes 工艺特写</li>
-          <li><b>Pony Pony / Saus / Icon Siam / Big C</b> — 逐一采购实拍</li>
-        </ul>
-      </div>
-      <div class="day-card">
-        <div class="day-num">DAY 3 ✂️ 剪片开团</div>
-        <div class="day-title">酒店剪片 · 正式开团</div>
-        <ul class="day-stops">
-          <li>整理 Day1-2 素材，每款出 1-2 条短视频</li>
-          <li><b>开团帖发布</b> · 定价公开 · 开始接单</li>
-        </ul>
-      </div>
-      <div class="day-card">
-        <div class="day-num">DAY 4 📢 催单补货</div>
-        <div class="day-title">按订单量精准补货</div>
-        <ul class="day-stops">
-          <li>热门款补货，避免缺货</li>
-          <li>下午打包称重，联系货代发货安排</li>
-        </ul>
-      </div>
-      <div class="day-card">
-        <div class="day-num">DAY 5 ✈️ 离境</div>
-        <div class="day-title">打包发货 · 结尾</div>
-        <ul class="day-stops">
-          <li>大件走顺丰国际 / 货代</li>
-          <li>所有订单登记确认后离境</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- PRODUCTS -->
-  <section class="section wrap" id="products">
-    <div class="section-head">
-      <h2>选购产品</h2>
-      <span class="count" id="prod-count">9 BRANDS</span>
-    </div>
-    <p class="section-note">点击卡片加入订单 — 右边会自动生成你的「登机牌」订单单。售价已含基本预估，最终运费按总重量分摊结算。</p>
-    <div class="grid" id="productGrid"><!-- injected --></div>
-  </section>
-
-  <!-- SHIPPING -->
-  <section class="section wrap" id="shipping">
-    <div class="section-head">
-      <h2>运输方式</h2>
-      <span class="count">BKK → MY</span>
-    </div>
-    <p class="section-note">运费按下单总重量分摊，到货后我们会在出单前告知实际运费明细。</p>
-    <table class="ship-table">
-      <thead>
-        <tr><th>方式</th><th>时效</th><th>价格参考</th><th>适合品类</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>顺丰国际</td><td class="fast">2–3 工作日</td><td>约 40–60 RM/kg</td><td>睡衣、包袋、鞋类（高价值）</td></tr>
-        <tr><td>EMS 国际邮政</td><td>5–10 天</td><td>约 20–35 RM/kg</td><td>发膜、芳疗、服饰</td></tr>
-        <tr><td>泰国专线货代</td><td>10–20 天</td><td>约 10–16 RM/kg</td><td>大批量发膜、服饰</td></tr>
-        <tr><td>随身行李</td><td>即时</td><td>约 9 RM/kg</td><td>小样 / 测试货</td></tr>
-      </tbody>
-    </table>
-  </section>
-
-  <!-- ORDER FORM -->
-  <section class="boarding-section" id="order">
-    <div class="wrap">
-      <div class="section-head">
-        <h2>填写订单</h2>
-        <span class="count">BOARDING PASS</span>
-      </div>
-      <p class="section-note">选好产品后，在这里填写收货资料完成下单。我们会通过你填写的联系方式确认付款与发货状态。</p>
-
-      <div class="notice">
-        <div class="notice-title">欢迎参与《泰够荔迪好买》泰国开团！</div>
-        <p>请如实填写以下资料，付款后上传付款截图，我们将在核实后确认订单。</p>
-        <p>如有疑问请联系 Telegram / IG。</p>
-        <p class="warn">⚠ 提交后请截图保存你的回答作为记录。</p>
-        <div class="contact-line">
-          <a href="#" target="_blank" rel="noopener">Telegram →</a>
-          <a href="#" target="_blank" rel="noopener">Instagram →</a>
-        </div>
-      </div>
-
-      <div class="pass">
-        <div class="pass-main">
-          <div class="pass-row">
-            <div class="pass-field">
-              <label for="buyerName">购买人姓名</label>
-              <input type="text" id="buyerName" placeholder="例：陈小美" required>
-            </div>
-            <div class="pass-field">
-              <label for="buyerContact">联系方式（电话 / 微信）</label>
-              <input type="text" id="buyerContact" placeholder="012-3456789" required>
-            </div>
-          </div>
-          <div class="pass-row">
-            <div class="pass-field" style="flex:1 1 100%;">
-              <label for="buyerAddress">收货地址</label>
-              <textarea id="buyerAddress" placeholder="完整地址，含邮编"></textarea>
-            </div>
-          </div>
-          <div class="pass-row">
-            <div class="pass-field" style="flex:1 1 100%;">
-              <label for="buyerRemark">备注（颜色 / 尺码 / 其他要求）</label>
-              <textarea id="buyerRemark" placeholder="例：Bloc B Shoes 要 38 码黑色"></textarea>
-            </div>
-          </div>
-
-          <div class="order-lines" id="orderLines">
-            <div class="order-empty" id="orderEmpty">还没选购产品 — 在上面点击想要的产品卡片即可加入</div>
-          </div>
-
-          <button class="btn submit-btn" id="submitOrder" type="button">提交订单 · Submit Order</button>
-          <p class="form-note">提交后请截图保存订单单号，并按品牌付款方式完成付款。付款确认后我们会更新「发货状态」。此页面为下单意向收集，最终订单以人工确认为准。</p>
-        </div>
-        <div class="pass-stub">
-          <div class="perforation"></div>
-          <div>
-            <div class="stub-label">Order No.</div>
-            <div class="stub-val mono" id="orderNo">BKK-——</div>
-            <div class="stub-label">Items 件数</div>
-            <div class="stub-val" id="stubItems">0</div>
-          </div>
-          <div>
-            <div class="stub-total-label">小计 SUBTOTAL</div>
-            <div class="stub-total mono" id="stubTotal">RM 0</div>
-            <div class="barcode"></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="terms">
-        <div class="terms-head">📋 购买条款 Terms &amp; Conditions</div>
-        <ol>
-          <li>
-            <b>请在下单前确认好尺码、颜色及数量，一旦付款后不接受更改。</b>
-            <span class="en">Please confirm size, colour &amp; quantity before payment. No changes after payment.</span>
-          </li>
-          <li>
-            <b>所有订单一经付款，概不退款。</b>
-            <span class="en">All sales are final. No refunds or returns.</span>
-          </li>
-          <li>
-            <b>运输时间预计 2–3 星期（从泰国寄出起计算）。</b>
-            <span class="en">Estimated shipping: 2–3 weeks from dispatch in Thailand.</span>
-          </li>
-          <li>
-            <b>收到货物后如发现损坏，请在 7 天内通知我们，逾期将无法申请赔偿。</b>
-            <span class="en">If goods are damaged upon receipt, please notify us within 7 days. No compensation claims will be accepted after 7 days.</span>
-          </li>
-        </ol>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section class="section wrap" id="faq">
-    <div class="section-head">
-      <h2>常见问题</h2>
-      <span class="count">FAQ</span>
-    </div>
-    <details class="faq-item" open>
-      <summary>什么时候发货？</summary>
-      <p>开团截止后，我们会按订单量统一补货、打包，并在 Day 5 安排发货。大件商品优先走顺丰国际（2–3 工作日送达），轻量商品视情况走 EMS 或货代以节省运费。</p>
-    </details>
-    <details class="faq-item">
-      <summary>价格已经包含运费吗？</summary>
-      <p>页面标示的是产品建议售价，运费会按你订单的总重量在出单前另外计算并告知，多人合并包裹可以摊低单件运费。</p>
-    </details>
-    <details class="faq-item">
-      <summary>可以指定颜色或尺码吗？</summary>
-      <p>可以，请在订单备注栏写清楚，例如「Slip to Sleep 经典色 M」。部分款式现场库存有限，先下单的优先安排。</p>
-    </details>
-    <details class="faq-item">
-      <summary>如何付款？</summary>
-      <p>提交订单后，我们会通过你填写的联系方式（电话/微信）发送付款方式与金额，付款后请保留付款截图作为参考凭证。</p>
-    </details>
-  </section>
-
-</main>
-
-<footer>
-  <div class="stamp-mark">BKK<br>2026</div>
-  <div>泰够荔迪好买 · Bangkok Group Buy &nbsp;|&nbsp; 5天4夜实地直采 &nbsp;|&nbsp; 现货实拍 · 诚信开团</div>
-</footer>
-
-<div class="toast" id="toast"></div>
+    <div id="ordersList"></div>
+  </div>
+</div>
 
 <script>
-  const PRODUCTS = [
-    { id:'bio30', brand:'Bio Treatment', name:'发膜 30ml 小包装', variant:'7-11 / Tops / Big C 引流款', price:12, stars:5, blurb:'消耗品复购高，引流入门款' },
-    { id:'bio150', brand:'Bio Treatment', name:'发膜 150ml 瓶装', variant:'Tops / Big C 超市', price:30, stars:5, blurb:'单瓶利润更高，建议主推' },
-    { id:'blocb', brand:'Bloc B Shoes', name:'法国羊皮经典款', variant:'Central Chitlom · 35–40 码', price:550, stars:4, blurb:'手工精品，每双限量感强' },
-    { id:'slip', brand:'Slip to Sleep', name:'纯棉缎面套装 经典色', variant:'Siam / Central World · S–XL', price:268, stars:5, blurb:'曼谷最火睡衣品牌，免穿内衣设计' },
-    { id:'slipmoomin', brand:'Slip to Sleep', name:'Moomin 联名款', variant:'Siam / Central World · S–XL', price:318, stars:5, blurb:'IP 联名限定，款式更稀缺' },
-    { id:'cloud', brand:'Sleeping Cloud', name:'Lyocell 套装 基本款', variant:'Siam / Central · S–XL', price:218, stars:5, blurb:'高端面料，差异化强，溢价空间大' },
-    { id:'bunny22', brand:'Little Bunny', name:'Brick 22cm PU 包袋', variant:'The Market BKK · 多色可选', price:558, stars:4, blurb:'泰国设计师品牌，话题性强' },
-    { id:'bunnymini', brand:'Little Bunny', name:'Mini Brick PU 包袋', variant:'The Market BKK · 多色可选', price:388, stars:4, blurb:'mini 款引流入坑，大款转化' },
-    { id:'moya', brand:'Mo-ya (Pony Pony)', name:'Nylon 单肩包', variant:'Pony Pony 门店 / Central', price:148, stars:3, blurb:'价格亲民，适合凑单引流' },
-    { id:'sausT', brand:'Saus 腊肠狗', name:'印花 T-shirt', variant:'品牌门店 · S–XL / Free Size', price:138, stars:3, blurb:'泰国小众潮牌，国内首发优势' },
-    { id:'sausCap', brand:'Saus 腊肠狗', name:'帽子 / 配件', variant:'品牌门店', price:95, stars:3, blurb:'轻量好带，适合凑运费重量' },
-    { id:'sukontaOil', brand:'Sukonta 芳疗', name:'精油 / 香薰小套装', variant:'Icon Siam', price:198, stars:5, blurb:'泰国天然草本，故事性强' },
-    { id:'sukontaGift', brand:'Sukonta 芳疗', name:'室内扩香礼盒', variant:'Icon Siam', price:328, stars:5, blurb:'礼盒定位高，送礼场景强' },
-    { id:'luna', brand:'Luna on Heel', name:'经典跟鞋 Microfiber', variant:'Central / 品牌门店 · 35–40', price:308, stars:4, blurb:'防水防汗，全年热销回购率高' },
-  ];
+// =========================================================
+// CONFIG — Set your Apps Script URL here or via admin panel
+// =========================================================
+const SCRIPT_URL_KEY = 'tglb_scriptUrl';
+let SCRIPT_URL = localStorage.getItem(SCRIPT_URL_KEY) || '';
 
-  const grid = document.getElementById('productGrid');
-  const orderLines = document.getElementById('orderLines');
-  const orderEmpty = document.getElementById('orderEmpty');
-  const stubTotal = document.getElementById('stubTotal');
-  const stubItems = document.getElementById('stubItems');
-  const orderNo = document.getElementById('orderNo');
-  const prodCount = document.getElementById('prod-count');
-  const toast = document.getElementById('toast');
-
-  const brandCount = new Set(PRODUCTS.map(p => p.brand)).size;
-  prodCount.textContent = brandCount + ' BRANDS · ' + PRODUCTS.length + ' ITEMS';
-
-  const cart = {}; // id -> qty
-
-  function stars(n){
-    return '★'.repeat(n) + '☆'.repeat(5-n);
+// =========================================================
+// PRODUCT DATA
+// =========================================================
+const PRODUCTS = [
+  {
+    id:'bio30', brand:'Bio Treatment', cat:'护发',
+    name:'发膜 30ml 小包装', sub:'7-11必买 · 最热卖',
+    price:12, emoji:'💆', badge:'🔥 必买',
+    bg:'linear-gradient(135deg,#a18cd1,#fbc2eb)',
+    desc:'曼谷7-11 / Tops / Big C 必买神器，引流体验款，买了都说好',
+    colors:[], sizes:[]
+  },
+  {
+    id:'bio150', brand:'Bio Treatment', cat:'护发',
+    name:'发膜 150ml 瓶装', sub:'正装主推款',
+    price:30, emoji:'🧴', badge:'💰 超值',
+    bg:'linear-gradient(135deg,#764ba2,#667eea)',
+    desc:'足量正装瓶，更高性价比，日常护发家庭常备',
+    colors:[], sizes:[]
+  },
+  {
+    id:'bloc', brand:'Bloc B Shoes', cat:'鞋履',
+    name:'法国羊皮经典款', sub:'手工精品 · 限量感',
+    price:550, emoji:'👠', badge:'✨ 精品',
+    bg:'linear-gradient(135deg,#2c3e50,#c9a84c)',
+    desc:'法国进口羊皮，手工制作，Central Chitlom 附近限量供应',
+    colors:['黑色','棕色','米白'], sizes:['35','36','37','38','39','40']
+  },
+  {
+    id:'slipC', brand:'Slip to Sleep', cat:'睡衣',
+    name:'纯棉缎面套装（经典色）', sub:'曼谷最火睡衣',
+    price:268, emoji:'🌙', badge:'⭐ 爆款',
+    bg:'linear-gradient(135deg,#f8cdda,#1d2671)',
+    desc:'三层加厚设计，免穿内衣，25–40岁女性首选，Siam / Central World 有售',
+    colors:['经典白','粉沙','黑色','薄荷绿'], sizes:['S','M','L','XL']
+  },
+  {
+    id:'slipM', brand:'Slip to Sleep', cat:'睡衣',
+    name:'Moomin 联名款', sub:'限量联名 · 独家首发',
+    price:318, emoji:'🦛', badge:'🦛 联名',
+    bg:'linear-gradient(135deg,#e0c3fc,#8ec5fc)',
+    desc:'可爱Moomin IP联名限量款，快抢！IP联名比经典款多价 RM 20–50',
+    colors:['联名粉','联名蓝'], sizes:['S','M','L','XL']
+  },
+  {
+    id:'cloud', brand:'Sleeping Cloud', cat:'睡衣',
+    name:'Lyocell 套装（基本款）', sub:'高端天丝面料',
+    price:218, emoji:'☁️', badge:'🌿 高端',
+    bg:'linear-gradient(135deg,#c1dfc4,#deecdd)',
+    desc:'Lyocell天丝面料，透气亲肤，注重品质的升级之选',
+    colors:['象牙白','燕麦色','薄荷'], sizes:['S','M','L','XL']
+  },
+  {
+    id:'bunny22', brand:'Little Bunny', cat:'包袋',
+    name:'Brick Bag 22cm（PU多色）', sub:'泰国设计师品牌',
+    price:558, emoji:'👜', badge:'🎨 多色',
+    bg:'linear-gradient(135deg,#d4a843,#9b6b1e)',
+    desc:'手工皮革砖块包，多色可选，The Market BKK 门店，IG种草必备',
+    colors:['奶油白','焦糖棕','玫瑰粉','深蓝','薄荷绿'], sizes:[]
+  },
+  {
+    id:'bunnyM', brand:'Little Bunny', cat:'包袋',
+    name:'Mini Brick Bag（PU）', sub:'迷你引流款',
+    price:388, emoji:'👛', badge:'✨ 新款',
+    bg:'linear-gradient(135deg,#ffeaa7,#fab1a0)',
+    desc:'小巧可爱，通勤约会两用，入坑首选，买大款的好搭档',
+    colors:['奶油白','焦糖棕','玫瑰粉','薄荷绿'], sizes:[]
+  },
+  {
+    id:'moya', brand:'Mo-ya Bag (Pony Pony)', cat:'包袋',
+    name:'Nylon 尼龙单肩包', sub:'平价时尚 · 日常通勤',
+    price:148, emoji:'🎒', badge:'💚 轻便',
+    bg:'linear-gradient(135deg,#11998e,#38ef7d)',
+    desc:'轻便尼龙，学生上班族百搭，价格亲民，适合凑单',
+    colors:['黑色','军绿','米白','马卡龙粉'], sizes:[]
+  },
+  {
+    id:'sausT', brand:'Saus', cat:'服饰',
+    name:'腊肠狗印花 T-shirt', sub:'泰国小众潮牌首发',
+    price:138, emoji:'🌭', badge:'🐕 独家',
+    bg:'linear-gradient(135deg,#2c3e50,#4ca1af)',
+    desc:'超萌腊肠狗印花，泰国首发，国内曝光极少，潮牌爱好者必入',
+    colors:['白色','黑色','米白'], sizes:['S','M','L','XL','XXL']
+  },
+  {
+    id:'sausH', brand:'Saus', cat:'服饰',
+    name:'腊肠狗帽子 / 配件', sub:'轻量好带 · 凑运费神器',
+    price:95, emoji:'🧢', badge:'🐕 周边',
+    bg:'linear-gradient(135deg,#4b6cb7,#182848)',
+    desc:'轻巧好带，萌系宠物主题，凑单降运费最佳选择',
+    colors:['白色','黑色'], sizes:['均码']
+  },
+  {
+    id:'sukOil', brand:'Sukonta', cat:'芳疗',
+    name:'精油 / 香薰小套装', sub:'泰国天然草本',
+    price:198, emoji:'🌿', badge:'🌿 天然',
+    bg:'linear-gradient(135deg,#134e5e,#71b280)',
+    desc:'Icon Siam 高端草本品牌，精油套装，中产生活必备',
+    colors:[], sizes:[]
+  },
+  {
+    id:'sukBox', brand:'Sukonta', cat:'芳疗',
+    name:'室内扩香礼盒', sub:'高端礼品 · 送礼必备',
+    price:328, emoji:'🕯️', badge:'🎁 礼盒',
+    bg:'linear-gradient(135deg,#5f2c82,#49a09d)',
+    desc:'精美礼盒包装，扩香套装，送礼高分选择，故事性极强',
+    colors:[], sizes:[]
+  },
+  {
+    id:'luna', brand:'Luna on Heel', cat:'鞋履',
+    name:'经典跟鞋（microfiber款）', sub:'设计感女鞋 · 高回购',
+    price:308, emoji:'💗', badge:'💗 热销',
+    bg:'linear-gradient(135deg,#f093fb,#f5576c)',
+    desc:'升级版microfiber材质，防水防汗，舒适好走，全年热销款',
+    colors:['裸粉','黑色','深棕','米白'], sizes:['35','36','37','38','39','40']
   }
+];
 
-  function renderGrid(){
-    grid.innerHTML = PRODUCTS.map((p, i) => `
-      <div class="tag ${cart[p.id] ? 'selected' : ''}" data-id="${p.id}" role="button" tabindex="0" aria-pressed="${!!cart[p.id]}">
-        <div class="tag-hole"></div>
-        <div class="tag-rank">NO. ${String(i+1).padStart(2,'0')} · ${p.brand}</div>
-        <div class="tag-name">${p.name}</div>
-        <div class="tag-variant">${p.variant}</div>
-        <div class="tag-divider"></div>
-        <div class="tag-price-row">
-          <div class="tag-price">RM ${p.price}<small> /件</small></div>
-          <div class="tag-stars" title="开团可塑性">${stars(p.stars)}</div>
-        </div>
-        <div class="tag-blurb">${p.blurb}</div>
-        <div class="tag-add">${cart[p.id] ? `已加入 · ${cart[p.id]} 件` : '+ 加入订单'}</div>
-      </div>
-    `).join('');
+// =========================================================
+// STATE
+// =========================================================
+let cart = [];
+let selectedVariants = {};
+let currentUser = null;
+let receiptBase64 = '';
+let checkoutStep = 1;
 
-    grid.querySelectorAll('.tag').forEach(el => {
-      el.addEventListener('click', () => toggleItem(el.dataset.id));
-      el.addEventListener('keydown', (e) => {
-        if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); toggleItem(el.dataset.id); }
-      });
-    });
-  }
+try { currentUser = JSON.parse(localStorage.getItem('tglb_user') || 'null'); } catch(e){}
 
-  function toggleItem(id){
-    if(cart[id]){
-      delete cart[id];
-      showToast('已移除');
-    } else {
-      cart[id] = 1;
-      showToast('已加入订单');
+// =========================================================
+// INIT
+// =========================================================
+document.addEventListener('DOMContentLoaded', () => {
+  renderProducts();
+  renderFAQ();
+  updateCartUI();
+  updateUserUI();
+  startCountdown();
+  initFade();
+  if (SCRIPT_URL) document.getElementById('scriptUrlInput').value = SCRIPT_URL;
+
+  // Close user dropdown on outside click
+  document.addEventListener('click', e => {
+    if (!e.target.closest('#userMenu')) {
+      document.getElementById('udrop').classList.remove('on');
     }
-    renderGrid();
-    renderOrder();
-  }
-
-  function changeQty(id, delta){
-    if(!cart[id]) return;
-    cart[id] += delta;
-    if(cart[id] <= 0) delete cart[id];
-    renderGrid();
-    renderOrder();
-  }
-
-  function renderOrder(){
-    const ids = Object.keys(cart);
-    if(ids.length === 0){
-      orderLines.innerHTML = '';
-      orderLines.appendChild(orderEmpty);
-      stubTotal.textContent = 'RM 0';
-      stubItems.textContent = '0';
-      return;
-    }
-    let total = 0, items = 0;
-    orderLines.innerHTML = ids.map(id => {
-      const p = PRODUCTS.find(x => x.id === id);
-      const qty = cart[id];
-      total += p.price * qty;
-      items += qty;
-      return `
-        <div class="order-line">
-          <span>${p.brand} — ${p.name}</span>
-          <span class="qty-ctrl">
-            <button type="button" aria-label="减少数量" data-action="dec" data-id="${id}">−</button>
-            <span class="mono">${qty}</span>
-            <button type="button" aria-label="增加数量" data-action="inc" data-id="${id}">+</button>
-            <span class="mono" style="min-width:64px; text-align:right;">RM ${p.price * qty}</span>
-          </span>
-        </div>
-      `;
-    }).join('');
-
-    orderLines.querySelectorAll('button').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const id = btn.dataset.id;
-        changeQty(id, btn.dataset.action === 'inc' ? 1 : -1);
-      });
-    });
-
-    stubTotal.textContent = 'RM ' + total;
-    stubItems.textContent = items;
-  }
-
-  function showToast(msg){
-    toast.textContent = msg;
-    toast.classList.add('show');
-    clearTimeout(window._toastTimer);
-    window._toastTimer = setTimeout(() => toast.classList.remove('show'), 1800);
-  }
-
-  function genOrderNo(){
-    const n = Math.floor(1000 + Math.random()*9000);
-    return 'BKK-' + n;
-  }
-
-  document.getElementById('submitOrder').addEventListener('click', () => {
-    const name = document.getElementById('buyerName').value.trim();
-    const contact = document.getElementById('buyerContact').value.trim();
-    if(Object.keys(cart).length === 0){
-      showToast('请先选购至少一件产品');
-      document.getElementById('products').scrollIntoView({behavior:'smooth'});
-      return;
-    }
-    if(!name || !contact){
-      showToast('请填写姓名与联系方式');
-      return;
-    }
-    const no = genOrderNo();
-    orderNo.textContent = no;
-    showToast('订单已生成：' + no + '，请截图保存');
   });
+});
 
-  renderGrid();
-  renderOrder();
+// =========================================================
+// COUNTDOWN
+// =========================================================
+function startCountdown() {
+  const deadline = new Date('2026-06-30T23:59:59+08:00');
+  function tick() {
+    const diff = deadline - new Date();
+    if (diff <= 0) {
+      document.getElementById('countdown').innerHTML =
+        '<div style="color:var(--gold);font-size:1.1rem;padding:1rem">团购已截止</div>';
+      return;
+    }
+    const d = Math.floor(diff/86400000);
+    const h = Math.floor((diff%86400000)/3600000);
+    const m = Math.floor((diff%3600000)/60000);
+    const s = Math.floor((diff%60000)/1000);
+    document.getElementById('cdD').textContent = d;
+    document.getElementById('cdH').textContent = String(h).padStart(2,'0');
+    document.getElementById('cdM').textContent = String(m).padStart(2,'0');
+    document.getElementById('cdS').textContent = String(s).padStart(2,'0');
+  }
+  tick(); setInterval(tick,1000);
+}
+
+// =========================================================
+// RENDER PRODUCTS
+// =========================================================
+function renderProducts() {
+  const grid = document.getElementById('productsGrid');
+  grid.innerHTML = PRODUCTS.map(p => {
+    const colorHtml = p.colors.length
+      ? `<div class="variant-block">
+           <div class="variant-lbl">颜色</div>
+           <div class="variant-opts" id="c-${p.id}">
+             ${p.colors.map(c=>`<button class="vbtn" onclick="pickVariant('${p.id}','color','${c}',this)">${c}</button>`).join('')}
+           </div>
+         </div>` : '';
+    const sizeHtml = p.sizes.length
+      ? `<div class="variant-block">
+           <div class="variant-lbl">尺码</div>
+           <div class="variant-opts" id="s-${p.id}">
+             ${p.sizes.map(s=>`<button class="vbtn" onclick="pickVariant('${p.id}','size','${s}',this)">${s}</button>`).join('')}
+           </div>
+         </div>` : '';
+    return `
+    <div class="product-card fade">
+      <div class="product-img" style="background:${p.bg}">
+        <span>${p.emoji}</span>
+        <div class="product-badge-tag">${p.badge}</div>
+      </div>
+      <div class="product-body">
+        <div class="prod-brand">${p.brand} · ${p.cat}</div>
+        <div class="prod-name">${p.name}</div>
+        <div class="prod-desc">${p.desc}</div>
+        ${colorHtml}${sizeHtml}
+        <div class="prod-footer">
+          <div class="prod-price">RM ${p.price}<small> /件</small></div>
+          <button class="add-btn" onclick="addToCart('${p.id}')">+ 加入购物车</button>
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+  initFade();
+}
+
+// =========================================================
+// VARIANT SELECTION
+// =========================================================
+function pickVariant(pid, type, val, btn) {
+  if (!selectedVariants[pid]) selectedVariants[pid] = {};
+  selectedVariants[pid][type] = val;
+  const cid = type === 'color' ? `c-${pid}` : `s-${pid}`;
+  document.getElementById(cid)?.querySelectorAll('.vbtn').forEach(b=>b.classList.remove('sel'));
+  btn.classList.add('sel');
+}
+
+// =========================================================
+// CART
+// =========================================================
+function addToCart(pid) {
+  const p = PRODUCTS.find(x=>x.id===pid);
+  if (!p) return;
+  const v = selectedVariants[pid] || {};
+  if (p.colors.length && !v.color) { toast('请先选择颜色 🎨'); return; }
+  if (p.sizes.length && !v.size) { toast('请先选择尺码 📏'); return; }
+
+  const key = `${pid}|${v.color||''}|${v.size||''}`;
+  const ex = cart.find(i=>i.key===key);
+  if (ex) { ex.qty++; } else {
+    cart.push({ key, pid, brand:p.brand, name:p.name,
+      color:v.color||'', size:v.size||'', price:p.price,
+      qty:1, emoji:p.emoji, bg:p.bg });
+  }
+  updateCartUI(); openCart();
+  toast(`已加入购物车 ${p.emoji}`);
+}
+
+function changeQty(key, d) {
+  const i = cart.find(x=>x.key===key);
+  if (!i) return;
+  i.qty += d;
+  if (i.qty <= 0) cart = cart.filter(x=>x.key!==key);
+  updateCartUI(); renderCartList();
+}
+
+function removeItem(key) {
+  cart = cart.filter(x=>x.key!==key);
+  updateCartUI(); renderCartList();
+}
+
+function cartTotal() { return cart.reduce((s,i)=>s+i.price*i.qty,0); }
+function cartCount() { return cart.reduce((s,i)=>s+i.qty,0); }
+
+function updateCartUI() {
+  const cnt = cartCount();
+  const el = document.getElementById('cartCount');
+  el.textContent = cnt;
+  el.style.display = cnt > 0 ? 'flex' : 'none';
+  document.getElementById('cartTotal').textContent = `RM ${cartTotal().toFixed(2)}`;
+  renderCartList();
+}
+
+function renderCartList() {
+  const el = document.getElementById('cartList');
+  if (!cart.length) {
+    el.innerHTML = '<div class="cart-empty">🛒<br>购物车是空的<br><small style="color:#ddd">去选购你喜欢的产品吧</small></div>';
+    return;
+  }
+  el.innerHTML = cart.map(i=>`
+    <div class="ci">
+      <div class="ci-icon" style="background:${i.bg}">${i.emoji}</div>
+      <div class="ci-info">
+        <div class="ci-name">${i.name}</div>
+        <div class="ci-var">${[i.color,i.size].filter(Boolean).join(' · ')||'标准款'}</div>
+        <div class="ci-price">RM ${(i.price*i.qty).toFixed(2)}</div>
+        <div class="ci-ctrl">
+          <button class="qty-btn" onclick="changeQty('${i.key}',-1)">−</button>
+          <span class="ci-qty">${i.qty}</span>
+          <button class="qty-btn" onclick="changeQty('${i.key}',1)">+</button>
+          <button class="rm-btn" onclick="removeItem('${i.key}')">删除</button>
+        </div>
+      </div>
+    </div>`).join('');
+}
+
+function openCart() {
+  document.getElementById('cartDrawer').classList.add('open');
+  document.getElementById('overlay').classList.add('on');
+}
+function closeCart() {
+  document.getElementById('cartDrawer').classList.remove('open');
+  document.getElementById('overlay').classList.remove('on');
+}
+
+// =========================================================
+// AUTH
+// =========================================================
+function handleUserBtn() {
+  if (!currentUser) { openModal('authModal'); return; }
+  document.getElementById('udrop').classList.toggle('on');
+}
+function updateUserUI() {
+  document.getElementById('userBtn').textContent = currentUser
+    ? `${currentUser.name} ▾` : '登录 / 注册';
+}
+function switchTab(t) {
+  document.getElementById('tabLogin').classList.toggle('on', t==='login');
+  document.getElementById('tabReg').classList.toggle('on', t==='reg');
+  document.getElementById('loginPane').style.display = t==='login' ? 'block' : 'none';
+  document.getElementById('regPane').style.display = t==='reg' ? 'block' : 'none';
+}
+function doLogin() {
+  const id = document.getElementById('loginId').value.trim();
+  if (!id) { toast('请输入账号'); return; }
+  const users = getUsers();
+  const u = users[id];
+  if (!u) { toast('账号不存在，请先注册'); switchTab('reg'); document.getElementById('regPhone').value=id; return; }
+  setCurrentUser(u); closeModal('authModal'); updateUserUI(); toast(`欢迎回来，${u.name}！👋`);
+}
+function doRegister() {
+  const name = document.getElementById('regName').value.trim();
+  const phone = document.getElementById('regPhone').value.trim();
+  const wechat = document.getElementById('regWechat').value.trim();
+  const addr = document.getElementById('regAddr').value.trim();
+  if (!name || !phone) { toast('请填写姓名和手机号码'); return; }
+  const users = getUsers();
+  if (users[phone]) { toast('该号码已注册，请直接登录'); switchTab('login'); return; }
+  const u = { name, phone, wechat, addr, orders:[] };
+  users[phone] = u; saveUsers(users);
+  setCurrentUser(u); closeModal('authModal'); updateUserUI(); toast(`注册成功！欢迎 ${name}！🎉`);
+}
+function doLogout() {
+  currentUser = null; localStorage.removeItem('tglb_user');
+  document.getElementById('udrop').classList.remove('on');
+  updateUserUI(); toast('已退出登录');
+}
+function openEditProfile() {
+  document.getElementById('udrop').classList.remove('on');
+  if (!currentUser) return;
+  switchTab('reg');
+  document.getElementById('regName').value = currentUser.name||'';
+  document.getElementById('regPhone').value = currentUser.phone||'';
+  document.getElementById('regWechat').value = currentUser.wechat||'';
+  document.getElementById('regAddr').value = currentUser.addr||'';
+  openModal('authModal');
+}
+function getUsers() { try { return JSON.parse(localStorage.getItem('tglb_users')||'{}'); } catch(e){ return {}; } }
+function saveUsers(u) { localStorage.setItem('tglb_users', JSON.stringify(u)); }
+function setCurrentUser(u) { currentUser=u; localStorage.setItem('tglb_user', JSON.stringify(u)); }
+
+// =========================================================
+// CHECKOUT
+// =========================================================
+function startCheckout() {
+  if (!cart.length) { toast('购物车是空的'); return; }
+  closeCart();
+  // Prefill
+  if (currentUser) {
+    document.getElementById('ckName').value = currentUser.name||'';
+    document.getElementById('ckPhone').value = currentUser.phone||(currentUser.wechat||'');
+    document.getElementById('ckAddr').value = currentUser.addr||'';
+  }
+  // Render order summary
+  const rows = cart.map(i=>`
+    <div class="summary-row">
+      <span>${i.emoji} ${i.name}${i.color?' ('+i.color+')':''}${i.size?' '+i.size:''} ×${i.qty}</span>
+      <span style="color:var(--gold);font-weight:600">RM ${(i.price*i.qty).toFixed(2)}</span>
+    </div>`).join('');
+  document.getElementById('orderSummary').innerHTML = `
+    <div style="font-size:0.78rem;color:#999;font-weight:600;margin-bottom:0.5rem">📋 订单明细</div>
+    ${rows}
+    <div class="summary-total">
+      <span>产品合计</span>
+      <span style="color:var(--gold)">RM ${cartTotal().toFixed(2)}</span>
+    </div>
+    <div style="font-size:0.72rem;color:#bbb;margin-top:0.3rem">* 运费按重量另计，出单前通知</div>`;
+
+  setStep(1); openModal('checkoutModal');
+}
+
+function toStep2() {
+  const name = document.getElementById('ckName').value.trim();
+  const phone = document.getElementById('ckPhone').value.trim();
+  const addr = document.getElementById('ckAddr').value.trim();
+  if (!name || !phone || !addr) { toast('请填写完整的姓名、联系方式和地址'); return; }
+  document.getElementById('ckDue').textContent = `RM ${cartTotal().toFixed(2)}`;
+  setStep(2);
+}
+function toStep1() { setStep(1); }
+
+function setStep(n) {
+  checkoutStep = n;
+  document.getElementById('ckStep1').style.display = n===1 ? 'block':'none';
+  document.getElementById('ckStep2').style.display = n===2 ? 'block':'none';
+  document.getElementById('ckStep3').style.display = n===3 ? 'block':'none';
+  [1,2,3].forEach(i=>{
+    const el = document.getElementById(`st${i}`);
+    el.className = 'step-item' + (i<n?' done':i===n?' active':'');
+    el.querySelector('.step-dot').textContent = i<n ? '✓' : i;
+  });
+}
+
+function handleReceipt(ev) {
+  const f = ev.target.files[0]; if(!f) return;
+  if (f.size > 5*1024*1024) { toast('图片最大5MB'); return; }
+  const r = new FileReader();
+  r.onload = e => {
+    receiptBase64 = e.target.result;
+    document.getElementById('upPlaceholder').style.display = 'none';
+    document.getElementById('upPreview').style.display = 'block';
+    document.getElementById('receiptImg').src = receiptBase64;
+    document.getElementById('uploadZone').classList.add('loaded');
+  };
+  r.readAsDataURL(f);
+}
+
+async function submitOrder() {
+  if (!receiptBase64) { toast('请上传付款截图 📷'); return; }
+  const name  = document.getElementById('ckName').value.trim();
+  const phone = document.getElementById('ckPhone').value.trim();
+  const addr  = document.getElementById('ckAddr').value.trim();
+  const notes = document.getElementById('ckNotes').value.trim();
+  const ref   = document.getElementById('payRef').value.trim();
+  const total = cartTotal();
+  const orderId = Date.now();
+
+  const payload = {
+    name, phone, address:addr, notes,
+    paymentRef: ref, paymentAmount: total.toFixed(2),
+    receiptBase64,
+    items: cart.map(i=>({
+      brand: i.brand,
+      product: i.name + (i.color?` (${i.color})`:'') + (i.size?` ${i.size}`:''),
+      color: i.color, size: i.size,
+      qty: i.qty, price: i.price,
+      subtotal: (i.price*i.qty).toFixed(2)
+    })),
+    timestamp: new Date().toISOString()
+  };
+
+  const btn = document.getElementById('submitBtn');
+  btn.textContent = '提交中…'; btn.disabled = true;
+
+  // Save order locally
+  const orderRec = { ...payload, id: orderId, status:'待确认', receiptBase64:undefined };
+  if (currentUser) {
+    const users = getUsers();
+    const u = users[currentUser.phone] || currentUser;
+    if (!u.orders) u.orders = [];
+    u.orders.unshift({ id:orderId, timestamp:payload.timestamp, status:'待确认',
+      paymentAmount:total.toFixed(2),
+      items:payload.items.map(i=>i.product) });
+    users[currentUser.phone] = u;
+    saveUsers(users); setCurrentUser(u);
+  }
+
+  // Sync to Google Sheets
+  let synced = false;
+  const surl = localStorage.getItem(SCRIPT_URL_KEY) || SCRIPT_URL;
+  if (surl) {
+    try {
+      await fetch(surl, {
+        method:'POST',
+        headers:{'Content-Type':'text/plain'},
+        body: JSON.stringify(payload)
+      });
+      synced = true;
+    } catch(err) { console.warn('Sheets sync error:', err); }
+  }
+
+  btn.textContent = '提交订单 ✓'; btn.disabled = false;
+
+  // Show success
+  document.getElementById('successInfo').innerHTML = `
+    <div class="order-card-row"><span>订单号</span><strong>#${orderId}</strong></div>
+    <div class="order-card-row"><span>姓名</span><strong>${name}</strong></div>
+    <div class="order-card-row"><span>联系方式</span><strong>${phone}</strong></div>
+    <div class="order-card-row"><span>产品金额</span><strong style="color:var(--gold)">RM ${total.toFixed(2)}</strong></div>
+    <div style="margin-top:0.5rem">
+      ${synced
+        ? '<span class="badge-sync-ok">✅ 已同步到管理表格</span>'
+        : '<span class="badge-sync-local">📋 本地已保存，请管理员检查</span>'}
+    </div>`;
+  setStep(3);
+}
+
+function resetCart() {
+  cart = []; receiptBase64 = '';
+  document.getElementById('receiptInput').value = '';
+  document.getElementById('upPlaceholder').style.display = 'block';
+  document.getElementById('upPreview').style.display = 'none';
+  document.getElementById('uploadZone').classList.remove('loaded');
+  updateCartUI();
+}
+
+// =========================================================
+// ORDER HISTORY
+// =========================================================
+function openOrders() {
+  document.getElementById('udrop').classList.remove('on');
+  if (!currentUser) { openModal('authModal'); return; }
+  const orders = (currentUser.orders || []);
+  const el = document.getElementById('ordersList');
+  if (!orders.length) {
+    el.innerHTML = '<div style="text-align:center;padding:2.5rem;color:#ccc">暂无订单记录</div>';
+  } else {
+    el.innerHTML = orders.map(o=>`
+      <div class="oh-item">
+        <div class="oh-top">
+          <span class="oh-id">#${o.id}</span>
+          <span class="status-tag ${statusClass(o.status)}">${o.status}</span>
+        </div>
+        <div class="oh-products">${Array.isArray(o.items)?o.items.join('、'):o.items}</div>
+        <div class="oh-bottom">
+          <span>${new Date(o.timestamp).toLocaleDateString('zh-CN')}</span>
+          <span class="oh-total">RM ${o.paymentAmount}</span>
+        </div>
+      </div>`).join('');
+  }
+  openModal('ordersModal');
+}
+function statusClass(s) {
+  if (s==='已发货') return 's-shipped';
+  if (s==='已付款') return 's-paid';
+  return 's-pending';
+}
+
+// =========================================================
+// FAQ
+// =========================================================
+const FAQS = [
+  { q:'什么时候发货？',
+    a:'开团截止后，我们会按订单量统一补货、打包，并在 Day 5 安排发货。大件商品优先走顺丰国际（2–3 工作日送达），轻量商品视情况走 EMS 或货代以节省运费。' },
+  { q:'价格已经包含运费吗？',
+    a:'页面标示的是产品建议售价，运费会按你订单的总重量在出单前另外计算并告知，多人合并包裹可以摊低单件运费。' },
+  { q:'可以指定颜色或尺码吗？',
+    a:'可以，请在订单备注栏写清楚，例如「Slip to Sleep 经典色 M」。部分款式现场库存有限，先下单的优先安排。' },
+  { q:'如何付款？',
+    a:'提交订单后，我们会通过你填写的联系方式（电话/微信）发送付款方式与金额，付款后请上传付款截图作为确认凭证。' },
+  { q:'如果泰国买不到了怎么办？',
+    a:'若现场库存已售罄，我们会在第一时间联系你，并全额退款，不收任何手续费，请放心下单。' }
+];
+function renderFAQ() {
+  document.getElementById('faqList').innerHTML = FAQS.map((f,i)=>`
+    <div class="faq-item" id="faq${i}">
+      <div class="faq-q" onclick="toggleFaq(${i})">
+        <span>${f.q}</span><span class="faq-arrow">▼</span>
+      </div>
+      <div class="faq-a"><p>${f.a}</p></div>
+    </div>`).join('');
+}
+function toggleFaq(i) {
+  const el = document.getElementById(`faq${i}`);
+  const wasOpen = el.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(e=>e.classList.remove('open'));
+  if (!wasOpen) el.classList.add('open');
+}
+
+// =========================================================
+// ADMIN SETUP
+// =========================================================
+function saveScriptUrl() {
+  const url = document.getElementById('scriptUrlInput').value.trim();
+  if (!url) { toast('请输入 URL'); return; }
+  localStorage.setItem(SCRIPT_URL_KEY, url);
+  SCRIPT_URL = url;
+  toast('✅ Google Sheets URL 已保存');
+}
+
+// =========================================================
+// MODAL & TOAST HELPERS
+// =========================================================
+function openModal(id) { document.getElementById(id).classList.add('on'); }
+function closeModal(id) { document.getElementById(id).classList.remove('on'); }
+document.querySelectorAll('.modal').forEach(m => {
+  m.addEventListener('click', e => { if(e.target===m) closeModal(m.id); });
+});
+function toast(msg) {
+  const el = document.getElementById('toast');
+  el.textContent = msg; el.classList.add('show');
+  setTimeout(()=>el.classList.remove('show'), 2600);
+}
+
+// =========================================================
+// SCROLL FADE ANIMATION
+// =========================================================
+function initFade() {
+  const obs = new IntersectionObserver(entries=>{
+    entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('in'); });
+  },{ threshold:0.08 });
+  document.querySelectorAll('.fade:not(.in)').forEach(el=>obs.observe(el));
+}
 </script>
-
 </body>
 </html>
