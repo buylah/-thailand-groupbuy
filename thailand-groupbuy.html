@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>泰够荔迪好买 · 泰国开团</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Expanded:wght@700;800&family=Space+Mono:wght@400;700&family=Noto+Sans+SC:wght@400;500;600;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F7F2E8;
+    --paper-2:#EFE7D6;
+    --ink:#1F1B16;
+    --ink-soft:#5A5147;
+    --gold:#C8932E;
+    --gold-deep:#9C6E1C;
+    --stamp:#B23A28;
+    --jade:#5C7A6B;
+    --line:rgba(31,27,22,0.18);
+    --shadow: 0 10px 30px rgba(31,27,22,0.12);
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Noto Sans SC','Space Mono',monospace;
+    -webkit-font-smoothing:antialiased;
+  }
+  body::before{
+    content:"";
+    position:fixed; inset:0;
+    background-image:
+      radial-gradient(circle at 20% 30%, rgba(31,27,22,0.025) 0, transparent 40%),
+      radial-gradient(circle at 80% 70%, rgba(31,27,22,0.025) 0, transparent 40%);
+    pointer-events:none;
+    z-index:0;
+  }
+  .wrap{max-width:1080px; margin:0 auto; padding:0 24px; position:relative; z-index:1;}
+
+  h1,h2,h3,.display{
+    font-family:'Archivo Expanded', sans-serif;
+    text-transform:uppercase;
+    letter-spacing:0.01em;
+  }
+  .mono{font-family:'Space Mono', monospace;}
+
+  a{color:inherit;}
+
+  /* ===== HEADER STRIP ===== */
+  .top-strip{
+    background:var(--ink);
+    color:var(--paper);
+    font-family:'Space Mono',monospace;
+    font-size:11px;
+    letter-spacing:0.08em;
+    padding:7px 0;
+    overflow:hidden;
+    white-space:nowrap;
+    position:relative;
+  }
+  .marquee{
+    display:inline-flex;
+    gap:40px;
+    animation:scroll 28s linear infinite;
+  }
+  .marquee span{display:inline-flex; align-items:center; gap:10px;}
+  .marquee .dot{width:4px;height:4px;background:var(--gold);border-radius:50%;display:inline-block;}
+  @keyframes scroll{
+    from{transform:translateX(0);}
+    to{transform:translateX(-50%);}
+  }
+  @media (prefers-reduced-motion: reduce){
+    .marquee{animation:none;}
+  }
+
+  /* ===== HERO ===== */
+  .hero{
+    padding:64px 0 40px;
+    position:relative;
+  }
+  .hero-tag{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    background:var(--paper);
+    border:1.5px dashed var(--gold-deep);
+    padding:6px 14px;
+    border-radius:999px;
+    font-family:'Space Mono',monospace;
+    font-size:12px;
+    letter-spacing:0.05em;
+    color:var(--gold-deep);
+    margin-bottom:28px;
+  }
+  .hero-tag .pulse{
+    width:7px;height:7px;border-radius:50%;
+    background:var(--stamp);
+    animation:pulse 1.8s ease-in-out infinite;
+  }
+  @keyframes pulse{
+    0%,100%{opacity:1; transform:scale(1);}
+    50%{opacity:0.4; transform:scale(0.8);}
+  }
+  @media (prefers-reduced-motion: reduce){ .pulse{animation:none;} }
+
+  .hero h1{
+    font-size:clamp(40px,7vw,78px);
+    line-height:0.96;
+    margin:0 0 18px;
+    color:var(--ink);
+  }
+  .hero h1 .accent{color:var(--stamp);}
+  .hero h1 .gold{color:var(--gold-deep);}
+
+  .hero-sub{
+    font-size:16px;
+    color:var(--ink-soft);
+    max-width:560px;
+    line-height:1.7;
+    margin-bottom:32px;
+  }
+  .hero-sub b{color:var(--ink); font-weight:700;}
+
+  .hero-cta-row{display:flex; gap:14px; flex-wrap:wrap; align-items:center; margin-bottom:46px;}
+  .btn{
+    font-family:'Space Mono',monospace;
+    font-weight:700;
+    font-size:13px;
+    letter-spacing:0.04em;
+    text-transform:uppercase;
+    padding:14px 26px;
+    border-radius:4px;
+    border:2px solid var(--ink);
+    background:var(--ink);
+    color:var(--paper);
+    cursor:pointer;
+    transition:transform 0.15s ease, box-shadow 0.15s ease;
+    display:inline-flex; align-items:center; gap:8px;
+  }
+  .btn:hover{transform:translateY(-2px); box-shadow:var(--shadow);}
+  .btn:focus-visible{outline:3px solid var(--gold); outline-offset:2px;}
+  .btn.ghost{background:transparent; color:var(--ink);}
+  .btn.gold{background:var(--gold-deep); border-color:var(--gold-deep); color:var(--paper);}
+
+  /* Flight strip - signature element preview in hero */
+  .flight-strip{
+    display:flex;
+    align-items:stretch;
+    border:2px solid var(--ink);
+    border-radius:6px;
+    overflow:hidden;
+    max-width:620px;
+    background:var(--paper-2);
+  }
+  .flight-strip .seg{
+    padding:16px 20px;
+    flex:1;
+  }
+  .flight-strip .seg + .seg{border-left:2px dashed var(--line);}
+  .flight-strip .seg-label{
+    font-family:'Space Mono',monospace;
+    font-size:10px;
+    letter-spacing:0.1em;
+    color:var(--ink-soft);
+    text-transform:uppercase;
+    margin-bottom:4px;
+  }
+  .flight-strip .seg-val{
+    font-family:'Archivo Expanded',sans-serif;
+    font-size:18px;
+    font-weight:800;
+  }
+  .flight-strip .seg.gold-bg{background:var(--gold-deep); color:var(--paper);}
+  .flight-strip .seg.gold-bg .seg-label{color:rgba(247,242,232,0.75);}
+
+  /* ===== SECTION HEADERS ===== */
+  .section{padding:56px 0;}
+  .section-head{
+    display:flex;
+    align-items:baseline;
+    justify-content:space-between;
+    gap:20px;
+    margin-bottom:8px;
+    border-bottom:3px solid var(--ink);
+    padding-bottom:14px;
+    flex-wrap:wrap;
+  }
+  .section-head h2{font-size:clamp(26px,4vw,38px); margin:0;}
+  .section-head .count{
+    font-family:'Space Mono',monospace;
+    font-size:13px;
+    color:var(--ink-soft);
+  }
+  .section-note{
+    color:var(--ink-soft);
+    font-size:14px;
+    margin:14px 0 36px;
+    max-width:640px;
+    line-height:1.6;
+  }
+
+  /* ===== ITINERARY RAIL ===== */
+  .rail{
+    display:flex;
+    overflow-x:auto;
+    gap:0;
+    padding-bottom:10px;
+    scrollbar-width:thin;
+  }
+  .rail::-webkit-scrollbar{height:6px;}
+  .rail::-webkit-scrollbar-thumb{background:var(--line); border-radius:3px;}
+  .day-card{
+    min-width:230px;
+    flex:0 0 230px;
+    border-right:2px dashed var(--line);
+    padding:0 22px;
+    position:relative;
+  }
+  .day-card:first-child{padding-left:0;}
+  .day-num{
+    font-family:'Archivo Expanded',sans-serif;
+    font-size:13px;
+    color:var(--stamp);
+    letter-spacing:0.08em;
+    margin-bottom:6px;
+  }
+  .day-title{
+    font-family:'Archivo Expanded',sans-serif;
+    font-weight:800;
+    font-size:16px;
+    margin-bottom:14px;
+    line-height:1.3;
+  }
+  .day-stops{list-style:none; margin:0; padding:0;}
+  .day-stops li{
+    font-size:12.5px;
+    color:var(--ink-soft);
+    padding:7px 0;
+    border-top:1px solid var(--line);
+    line-height:1.5;
+  }
+  .day-stops li:first-child{border-top:none;}
+  .day-stops b{color:var(--ink); display:block; font-weight:600; margin-bottom:1px;}
+
+  /* ===== PRODUCT GRID — LUGGAGE TAGS ===== */
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(270px,1fr));
+    gap:22px;
+  }
+  .tag{
+    background:var(--paper);
+    border:2px solid var(--ink);
+    border-radius:8px;
+    position:relative;
+    padding:20px 20px 22px;
+    cursor:pointer;
+    transition:transform 0.18s ease, box-shadow 0.18s ease;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+  }
+  .tag:hover{transform:translateY(-4px) rotate(-0.4deg); box-shadow:var(--shadow);}
+  .tag.selected{
+    background:#FBF6E9;
+    box-shadow:0 0 0 3px var(--gold-deep) inset;
+  }
+  .tag-hole{
+    position:absolute;
+    top:18px; right:18px;
+    width:16px; height:16px;
+    border-radius:50%;
+    border:2px solid var(--ink);
+    background:var(--paper);
+  }
+  .tag-hole::after{
+    content:"";
+    position:absolute; inset:3px;
+    border-radius:50%;
+    background:var(--paper);
+    box-shadow:inset 0 0 0 1px var(--line);
+  }
+  .tag-rank{
+    font-family:'Space Mono',monospace;
+    font-size:11px;
+    color:var(--gold-deep);
+    letter-spacing:0.08em;
+  }
+  .tag-name{
+    font-family:'Archivo Expanded',sans-serif;
+    font-weight:800;
+    font-size:18px;
+    line-height:1.25;
+    padding-right:24px;
+  }
+  .tag-variant{
+    font-size:12.5px;
+    color:var(--ink-soft);
+    line-height:1.5;
+  }
+  .tag-divider{
+    border-top:2px dashed var(--line);
+    margin:2px 0;
+  }
+  .tag-price-row{
+    display:flex;
+    align-items:baseline;
+    justify-content:space-between;
+  }
+  .tag-price{
+    font-family:'Archivo Expanded',sans-serif;
+    font-size:26px;
+    font-weight:800;
+    color:var(--stamp);
+  }
+  .tag-price small{font-size:13px; font-family:'Space Mono',monospace; color:var(--ink-soft); font-weight:400;}
+  .tag-stars{font-size:12px; letter-spacing:1px;}
+  .tag-blurb{
+    font-size:12px;
+    color:var(--ink-soft);
+    line-height:1.55;
+    min-height:36px;
+  }
+  .tag-add{
+    font-family:'Space Mono',monospace;
+    font-size:12px;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:0.04em;
+    border:2px solid var(--ink);
+    border-radius:4px;
+    padding:10px;
+    text-align:center;
+    background:var(--ink);
+    color:var(--paper);
+    transition:background 0.15s, color 0.15s;
+  }
+  .tag.selected .tag-add{background:var(--jade); border-color:var(--jade); color:var(--paper);}
+  .tag-add:focus-visible{outline:3px solid var(--gold); outline-offset:2px;}
+
+  /* ===== ORDER FORM — BOARDING PASS ===== */
+  .boarding-section{
+    background:var(--ink);
+    padding:64px 0 80px;
+    position:relative;
+  }
+  .boarding-section .section-head{border-bottom-color:rgba(247,242,232,0.25);}
+  .boarding-section .section-head h2{color:var(--paper);}
+  .boarding-section .section-head .count{color:rgba(247,242,232,0.6);}
+  .boarding-section .section-note{color:rgba(247,242,232,0.65);}
+
+  .pass{
+    display:grid;
+    grid-template-columns:1fr 230px;
+    background:var(--paper);
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 20px 50px rgba(0,0,0,0.35);
+  }
+  @media (max-width:680px){
+    .pass{grid-template-columns:1fr;}
+  }
+  .pass-main{padding:32px 34px;}
+  .pass-stub{
+    background:var(--gold-deep);
+    color:var(--paper);
+    padding:32px 26px;
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+  }
+  @media (max-width:680px){
+    .pass-stub{order:-1; flex-direction:row; flex-wrap:wrap; gap:14px;}
+  }
+  .perforation{
+    position:absolute;
+    left:0; top:0; bottom:0;
+    width:0;
+    border-left:3px dashed var(--paper);
+    opacity:0.5;
+  }
+  @media (max-width:680px){
+    .perforation{
+      left:0; right:0; top:auto; bottom:0; width:auto; height:0;
+      border-left:none; border-top:3px dashed var(--paper);
+    }
+  }
+
+  .pass-row{display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; margin-bottom:18px;}
+  .pass-field{flex:1; min-width:140px;}
+  .pass-field label{
+    display:block;
+    font-family:'Space Mono',monospace;
+    font-size:10.5px;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    margin-bottom:6px;
+  }
+  .pass-field input, .pass-field select, .pass-field textarea{
+    width:100%;
+    font-family:'Noto Sans SC','Space Mono',monospace;
+    font-size:14px;
+    padding:10px 12px;
+    border:2px solid var(--ink);
+    border-radius:4px;
+    background:var(--paper);
+    color:var(--ink);
+  }
+  .pass-field input:focus, .pass-field select:focus, .pass-field textarea:focus{
+    outline:3px solid var(--gold);
+    outline-offset:1px;
+  }
+  .pass-field textarea{resize:vertical; min-height:64px;}
+
+  .order-lines{margin:20px 0; border-top:2px dashed var(--line); padding-top:16px;}
+  .order-line{
+    display:flex; justify-content:space-between; align-items:center;
+    font-size:13.5px;
+    padding:8px 0;
+    gap:10px;
+  }
+  .order-line .qty-ctrl{display:flex; align-items:center; gap:8px;}
+  .order-line button{
+    width:24px;height:24px;
+    border:1.5px solid var(--ink);
+    background:var(--paper);
+    border-radius:4px;
+    font-family:'Space Mono',monospace;
+    cursor:pointer;
+    line-height:1;
+  }
+  .order-line button:focus-visible{outline:2px solid var(--gold); outline-offset:1px;}
+  .order-empty{
+    color:var(--ink-soft);
+    font-size:13px;
+    padding:18px 0;
+    text-align:center;
+    border:1.5px dashed var(--line);
+    border-radius:6px;
+  }
+
+  .pass-stub .stub-label{
+    font-family:'Space Mono',monospace;
+    font-size:10px;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    opacity:0.8;
+    margin-bottom:4px;
+  }
+  .pass-stub .stub-val{
+    font-family:'Archivo Expanded',sans-serif;
+    font-weight:800;
+    font-size:15px;
+    margin-bottom:18px;
+  }
+  .pass-stub .stub-total-label{font-size:11px; opacity:0.85; margin-bottom:2px;}
+  .pass-stub .stub-total{
+    font-family:'Archivo Expanded',sans-serif;
+    font-size:34px;
+    font-weight:800;
+  }
+  .barcode{
+    margin-top:18px;
+    height:34px;
+    background:repeating-linear-gradient(90deg, var(--paper) 0 2px, transparent 2px 5px, var(--paper) 5px 6px, transparent 6px 9px);
+    opacity:0.85;
+  }
+
+  .submit-btn{
+    width:100%;
+    margin-top:8px;
+    background:var(--stamp);
+    border-color:var(--stamp);
+    justify-content:center;
+    font-size:14px;
+    padding:16px;
+  }
+  .submit-btn:hover{background:#962f21; border-color:#962f21;}
+
+  .form-note{
+    font-size:12px;
+    color:var(--ink-soft);
+    margin-top:14px;
+    line-height:1.6;
+  }
+
+  /* ===== WELCOME NOTICE ===== */
+  .notice{
+    background:var(--paper);
+    border:2px solid var(--paper);
+    border-left:6px solid var(--stamp);
+    border-radius:6px;
+    padding:22px 24px;
+    margin-bottom:32px;
+    box-shadow:var(--shadow);
+  }
+  .notice-title{
+    font-family:'Archivo Expanded',sans-serif;
+    font-weight:800;
+    font-size:16px;
+    margin-bottom:10px;
+    color:var(--ink);
+  }
+  .notice p{
+    font-size:13.5px;
+    color:var(--ink-soft);
+    line-height:1.75;
+    margin:0 0 8px;
+  }
+  .notice p:last-child{margin-bottom:0;}
+  .notice .warn{
+    color:var(--stamp);
+    font-weight:700;
+  }
+  .notice .contact-line{
+    display:inline-flex;
+    gap:14px;
+    flex-wrap:wrap;
+    margin-top:10px;
+  }
+  .notice .contact-line a{
+    font-family:'Space Mono',monospace;
+    font-size:12.5px;
+    font-weight:700;
+    color:var(--gold-deep);
+    text-decoration:none;
+    border-bottom:1.5px solid var(--gold-deep);
+    padding-bottom:1px;
+  }
+  .notice .contact-line a:hover{color:var(--stamp); border-color:var(--stamp);}
+
+  /* ===== TERMS & CONDITIONS ===== */
+  .terms{
+    background:var(--paper);
+    border-radius:6px;
+    padding:26px 28px;
+    margin-top:36px;
+    position:relative;
+  }
+  .terms::before{
+    content:"条款";
+    position:absolute;
+    top:-14px; left:24px;
+    background:var(--ink);
+    color:var(--paper);
+    font-family:'Space Mono',monospace;
+    font-size:10.5px;
+    letter-spacing:0.1em;
+    padding:4px 12px;
+    border-radius:3px;
+  }
+  .terms-head{
+    font-family:'Archivo Expanded',sans-serif;
+    font-weight:800;
+    font-size:15px;
+    margin:6px 0 16px;
+    display:flex;
+    align-items:center;
+    gap:8px;
+  }
+  .terms ol{
+    margin:0;
+    padding:0;
+    list-style:none;
+    counter-reset:term;
+  }
+  .terms li{
+    counter-increment:term;
+    position:relative;
+    padding:14px 0 14px 38px;
+    border-top:1.5px dashed var(--line);
+    font-size:13px;
+    line-height:1.65;
+    color:var(--ink-soft);
+  }
+  .terms li:first-child{border-top:none;}
+  .terms li::before{
+    content:counter(term);
+    position:absolute;
+    left:0; top:14px;
+    width:24px; height:24px;
+    border-radius:50%;
+    background:var(--gold-deep);
+    color:var(--paper);
+    font-family:'Space Mono',monospace;
+    font-size:12px;
+    font-weight:700;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .terms li b{color:var(--ink); display:block; margin-bottom:2px; font-size:13.5px;}
+  .terms li .en{
+    font-family:'Space Mono',monospace;
+    font-size:11.5px;
+    color:var(--ink-soft);
+    opacity:0.85;
+    display:block;
+    margin-top:3px;
+  }
+
+
+  /* ===== SHIPPING TABLE ===== */
+  .ship-table{
+    width:100%;
+    border-collapse:collapse;
+    font-size:13.5px;
+  }
+  .ship-table th, .ship-table td{
+    text-align:left;
+    padding:12px 14px;
+    border-bottom:1.5px solid var(--line);
+  }
+  .ship-table th{
+    font-family:'Space Mono',monospace;
+    font-size:11px;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    border-bottom:2px solid var(--ink);
+  }
+  .ship-table tr:last-child td{border-bottom:none;}
+  .ship-table td.fast{color:var(--jade); font-weight:600;}
+
+  /* ===== FAQ ===== */
+  .faq-item{
+    border-bottom:1.5px solid var(--line);
+    padding:18px 0;
+  }
+  .faq-item summary{
+    cursor:pointer;
+    font-family:'Archivo Expanded',sans-serif;
+    font-weight:700;
+    font-size:15px;
+    list-style:none;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:12px;
+  }
+  .faq-item summary::-webkit-details-marker{display:none;}
+  .faq-item summary::after{
+    content:"+";
+    font-size:22px;
+    color:var(--gold-deep);
+    flex-shrink:0;
+    transition:transform 0.2s ease;
+  }
+  .faq-item[open] summary::after{transform:rotate(45deg);}
+  .faq-item p{
+    margin:12px 0 0;
+    font-size:13.5px;
+    color:var(--ink-soft);
+    line-height:1.7;
+  }
+
+  /* ===== FOOTER ===== */
+  footer{
+    padding:40px 0 50px;
+    text-align:center;
+    font-family:'Space Mono',monospace;
+    font-size:11.5px;
+    color:var(--ink-soft);
+    border-top:2px solid var(--ink);
+  }
+  footer .stamp-mark{
+    display:inline-block;
+    color:var(--stamp);
+    border:2px solid var(--stamp);
+    border-radius:50%;
+    width:46px; height:46px;
+    line-height:42px;
+    font-family:'Archivo Expanded',sans-serif;
+    font-weight:800;
+    font-size:11px;
+    transform:rotate(-8deg);
+    margin-bottom:14px;
+  }
+
+  /* toast */
+  .toast{
+    position:fixed;
+    bottom:24px;
+    left:50%;
+    transform:translateX(-50%) translateY(20px);
+    background:var(--ink);
+    color:var(--paper);
+    padding:14px 24px;
+    border-radius:6px;
+    font-family:'Space Mono',monospace;
+    font-size:13px;
+    opacity:0;
+    pointer-events:none;
+    transition:opacity 0.25s ease, transform 0.25s ease;
+    z-index:50;
+    box-shadow:var(--shadow);
+  }
+  .toast.show{opacity:1; transform:translateX(-50%) translateY(0);}
+
+  @media (max-width:680px){
+    .hero{padding:44px 0 28px;}
+    .flight-strip{flex-direction:column;}
+    .flight-strip .seg + .seg{border-left:none; border-top:2px dashed var(--line);}
+  }
+</style>
+</head>
+<body>
+
+<div class="top-strip">
+  <div class="marquee">
+    <span><span class="dot"></span>泰够荔迪好买 · 曼谷开团 5天4夜直采</span>
+    <span><span class="dot"></span>实拍实买 · 现货直发</span>
+    <span><span class="dot"></span>Day 3 开团 · 数量有限</span>
+    <span><span class="dot"></span>泰够荔迪好买 · 曼谷开团 5天4夜直采</span>
+    <span><span class="dot"></span>实拍实买 · 现货直发</span>
+    <span><span class="dot"></span>Day 3 开团 · 数量有限</span>
+  </div>
+</div>
+
+<header class="wrap hero">
+  <div class="hero-tag"><span class="pulse"></span>OPEN GROUP BUY · 现正开团</div>
+  <h1><span class="gold">泰够荔迪</span>好买<br>我们<span class="accent">亲自</span>飞去买</h1>
+  <p class="hero-sub">从 Siam 到 Icon Siam，从 7-11 到 The Market BKK —— <b>5 天 4 夜</b>实地采购，每一款都试穿试用、拍给你看。下单后人在曼谷直接帮你扫货，行李箱直接扛回来。</p>
+  <div class="hero-cta-row">
+    <a href="#products" class="btn">查看 9 款产品 ↓</a>
+    <a href="#order" class="btn ghost">直接下单</a>
+  </div>
+  <div class="flight-strip">
+    <div class="seg">
+      <div class="seg-label">Route 路线</div>
+      <div class="seg-val">KUL → BKK</div>
+    </div>
+    <div class="seg">
+      <div class="seg-label">Duration 行程</div>
+      <div class="seg-val">5D4N</div>
+    </div>
+    <div class="seg gold-bg">
+      <div class="seg-label">Open / Close</div>
+      <div class="seg-val">Day 3 开团</div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- ITINERARY -->
+  <section class="section wrap" id="itinerary">
+    <div class="section-head">
+      <h2>实地行程</h2>
+      <span class="count">5 DAYS / 9 STOPS</span>
+    </div>
+    <p class="section-note">每一款产品，我们都到品牌门店现场实拍、当面确认尺码和现货 —— 不是网上随便找图就开团。</p>
+    <div class="rail">
+      <div class="day-card">
+        <div class="day-num">DAY 1 ✈️ 抵达</div>
+        <div class="day-title">机场直冲购物区</div>
+        <ul class="day-stops">
+          <li><b>素万那普机场</b>抵达，开箱拍摄起拍</li>
+          <li><b>Siam / Central World</b><br>Slip to Sleep、Sleeping Cloud 试穿实拍</li>
+        </ul>
+      </div>
+      <div class="day-card">
+        <div class="day-num">DAY 2 📦 主力扫货</div>
+        <div class="day-title">一天跑 7 个品牌门店</div>
+        <ul class="day-stops">
+          <li><b>The Market BKK</b> — Little Bunny Brick Bag 全色号</li>
+          <li><b>Central Chitlom</b> — Bloc B Shoes 工艺特写</li>
+          <li><b>Pony Pony / Saus / Icon Siam / Big C</b> — 逐一采购实拍</li>
+        </ul>
+      </div>
+      <div class="day-card">
+        <div class="day-num">DAY 3 ✂️ 剪片开团</div>
+        <div class="day-title">酒店剪片 · 正式开团</div>
+        <ul class="day-stops">
+          <li>整理 Day1-2 素材，每款出 1-2 条短视频</li>
+          <li><b>开团帖发布</b> · 定价公开 · 开始接单</li>
+        </ul>
+      </div>
+      <div class="day-card">
+        <div class="day-num">DAY 4 📢 催单补货</div>
+        <div class="day-title">按订单量精准补货</div>
+        <ul class="day-stops">
+          <li>热门款补货，避免缺货</li>
+          <li>下午打包称重，联系货代发货安排</li>
+        </ul>
+      </div>
+      <div class="day-card">
+        <div class="day-num">DAY 5 ✈️ 离境</div>
+        <div class="day-title">打包发货 · 结尾</div>
+        <ul class="day-stops">
+          <li>大件走顺丰国际 / 货代</li>
+          <li>所有订单登记确认后离境</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section class="section wrap" id="products">
+    <div class="section-head">
+      <h2>选购产品</h2>
+      <span class="count" id="prod-count">9 BRANDS</span>
+    </div>
+    <p class="section-note">点击卡片加入订单 — 右边会自动生成你的「登机牌」订单单。售价已含基本预估，最终运费按总重量分摊结算。</p>
+    <div class="grid" id="productGrid"><!-- injected --></div>
+  </section>
+
+  <!-- SHIPPING -->
+  <section class="section wrap" id="shipping">
+    <div class="section-head">
+      <h2>运输方式</h2>
+      <span class="count">BKK → MY</span>
+    </div>
+    <p class="section-note">运费按下单总重量分摊，到货后我们会在出单前告知实际运费明细。</p>
+    <table class="ship-table">
+      <thead>
+        <tr><th>方式</th><th>时效</th><th>价格参考</th><th>适合品类</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>顺丰国际</td><td class="fast">2–3 工作日</td><td>约 40–60 RM/kg</td><td>睡衣、包袋、鞋类（高价值）</td></tr>
+        <tr><td>EMS 国际邮政</td><td>5–10 天</td><td>约 20–35 RM/kg</td><td>发膜、芳疗、服饰</td></tr>
+        <tr><td>泰国专线货代</td><td>10–20 天</td><td>约 10–16 RM/kg</td><td>大批量发膜、服饰</td></tr>
+        <tr><td>随身行李</td><td>即时</td><td>约 9 RM/kg</td><td>小样 / 测试货</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ORDER FORM -->
+  <section class="boarding-section" id="order">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>填写订单</h2>
+        <span class="count">BOARDING PASS</span>
+      </div>
+      <p class="section-note">选好产品后，在这里填写收货资料完成下单。我们会通过你填写的联系方式确认付款与发货状态。</p>
+
+      <div class="notice">
+        <div class="notice-title">欢迎参与《泰够荔迪好买》泰国开团！</div>
+        <p>请如实填写以下资料，付款后上传付款截图，我们将在核实后确认订单。</p>
+        <p>如有疑问请联系 Telegram / IG。</p>
+        <p class="warn">⚠ 提交后请截图保存你的回答作为记录。</p>
+        <div class="contact-line">
+          <a href="#" target="_blank" rel="noopener">Telegram →</a>
+          <a href="#" target="_blank" rel="noopener">Instagram →</a>
+        </div>
+      </div>
+
+      <div class="pass">
+        <div class="pass-main">
+          <div class="pass-row">
+            <div class="pass-field">
+              <label for="buyerName">购买人姓名</label>
+              <input type="text" id="buyerName" placeholder="例：陈小美" required>
+            </div>
+            <div class="pass-field">
+              <label for="buyerContact">联系方式（电话 / 微信）</label>
+              <input type="text" id="buyerContact" placeholder="012-3456789" required>
+            </div>
+          </div>
+          <div class="pass-row">
+            <div class="pass-field" style="flex:1 1 100%;">
+              <label for="buyerAddress">收货地址</label>
+              <textarea id="buyerAddress" placeholder="完整地址，含邮编"></textarea>
+            </div>
+          </div>
+          <div class="pass-row">
+            <div class="pass-field" style="flex:1 1 100%;">
+              <label for="buyerRemark">备注（颜色 / 尺码 / 其他要求）</label>
+              <textarea id="buyerRemark" placeholder="例：Bloc B Shoes 要 38 码黑色"></textarea>
+            </div>
+          </div>
+
+          <div class="order-lines" id="orderLines">
+            <div class="order-empty" id="orderEmpty">还没选购产品 — 在上面点击想要的产品卡片即可加入</div>
+          </div>
+
+          <button class="btn submit-btn" id="submitOrder" type="button">提交订单 · Submit Order</button>
+          <p class="form-note">提交后请截图保存订单单号，并按品牌付款方式完成付款。付款确认后我们会更新「发货状态」。此页面为下单意向收集，最终订单以人工确认为准。</p>
+        </div>
+        <div class="pass-stub">
+          <div class="perforation"></div>
+          <div>
+            <div class="stub-label">Order No.</div>
+            <div class="stub-val mono" id="orderNo">BKK-——</div>
+            <div class="stub-label">Items 件数</div>
+            <div class="stub-val" id="stubItems">0</div>
+          </div>
+          <div>
+            <div class="stub-total-label">小计 SUBTOTAL</div>
+            <div class="stub-total mono" id="stubTotal">RM 0</div>
+            <div class="barcode"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="terms">
+        <div class="terms-head">📋 购买条款 Terms &amp; Conditions</div>
+        <ol>
+          <li>
+            <b>请在下单前确认好尺码、颜色及数量，一旦付款后不接受更改。</b>
+            <span class="en">Please confirm size, colour &amp; quantity before payment. No changes after payment.</span>
+          </li>
+          <li>
+            <b>所有订单一经付款，概不退款。</b>
+            <span class="en">All sales are final. No refunds or returns.</span>
+          </li>
+          <li>
+            <b>运输时间预计 2–3 星期（从泰国寄出起计算）。</b>
+            <span class="en">Estimated shipping: 2–3 weeks from dispatch in Thailand.</span>
+          </li>
+          <li>
+            <b>收到货物后如发现损坏，请在 7 天内通知我们，逾期将无法申请赔偿。</b>
+            <span class="en">If goods are damaged upon receipt, please notify us within 7 days. No compensation claims will be accepted after 7 days.</span>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section wrap" id="faq">
+    <div class="section-head">
+      <h2>常见问题</h2>
+      <span class="count">FAQ</span>
+    </div>
+    <details class="faq-item" open>
+      <summary>什么时候发货？</summary>
+      <p>开团截止后，我们会按订单量统一补货、打包，并在 Day 5 安排发货。大件商品优先走顺丰国际（2–3 工作日送达），轻量商品视情况走 EMS 或货代以节省运费。</p>
+    </details>
+    <details class="faq-item">
+      <summary>价格已经包含运费吗？</summary>
+      <p>页面标示的是产品建议售价，运费会按你订单的总重量在出单前另外计算并告知，多人合并包裹可以摊低单件运费。</p>
+    </details>
+    <details class="faq-item">
+      <summary>可以指定颜色或尺码吗？</summary>
+      <p>可以，请在订单备注栏写清楚，例如「Slip to Sleep 经典色 M」。部分款式现场库存有限，先下单的优先安排。</p>
+    </details>
+    <details class="faq-item">
+      <summary>如何付款？</summary>
+      <p>提交订单后，我们会通过你填写的联系方式（电话/微信）发送付款方式与金额，付款后请保留付款截图作为参考凭证。</p>
+    </details>
+  </section>
+
+</main>
+
+<footer>
+  <div class="stamp-mark">BKK<br>2026</div>
+  <div>泰够荔迪好买 · Bangkok Group Buy &nbsp;|&nbsp; 5天4夜实地直采 &nbsp;|&nbsp; 现货实拍 · 诚信开团</div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script>
+  const PRODUCTS = [
+    { id:'bio30', brand:'Bio Treatment', name:'发膜 30ml 小包装', variant:'7-11 / Tops / Big C 引流款', price:12, stars:5, blurb:'消耗品复购高，引流入门款' },
+    { id:'bio150', brand:'Bio Treatment', name:'发膜 150ml 瓶装', variant:'Tops / Big C 超市', price:30, stars:5, blurb:'单瓶利润更高，建议主推' },
+    { id:'blocb', brand:'Bloc B Shoes', name:'法国羊皮经典款', variant:'Central Chitlom · 35–40 码', price:550, stars:4, blurb:'手工精品，每双限量感强' },
+    { id:'slip', brand:'Slip to Sleep', name:'纯棉缎面套装 经典色', variant:'Siam / Central World · S–XL', price:268, stars:5, blurb:'曼谷最火睡衣品牌，免穿内衣设计' },
+    { id:'slipmoomin', brand:'Slip to Sleep', name:'Moomin 联名款', variant:'Siam / Central World · S–XL', price:318, stars:5, blurb:'IP 联名限定，款式更稀缺' },
+    { id:'cloud', brand:'Sleeping Cloud', name:'Lyocell 套装 基本款', variant:'Siam / Central · S–XL', price:218, stars:5, blurb:'高端面料，差异化强，溢价空间大' },
+    { id:'bunny22', brand:'Little Bunny', name:'Brick 22cm PU 包袋', variant:'The Market BKK · 多色可选', price:558, stars:4, blurb:'泰国设计师品牌，话题性强' },
+    { id:'bunnymini', brand:'Little Bunny', name:'Mini Brick PU 包袋', variant:'The Market BKK · 多色可选', price:388, stars:4, blurb:'mini 款引流入坑，大款转化' },
+    { id:'moya', brand:'Mo-ya (Pony Pony)', name:'Nylon 单肩包', variant:'Pony Pony 门店 / Central', price:148, stars:3, blurb:'价格亲民，适合凑单引流' },
+    { id:'sausT', brand:'Saus 腊肠狗', name:'印花 T-shirt', variant:'品牌门店 · S–XL / Free Size', price:138, stars:3, blurb:'泰国小众潮牌，国内首发优势' },
+    { id:'sausCap', brand:'Saus 腊肠狗', name:'帽子 / 配件', variant:'品牌门店', price:95, stars:3, blurb:'轻量好带，适合凑运费重量' },
+    { id:'sukontaOil', brand:'Sukonta 芳疗', name:'精油 / 香薰小套装', variant:'Icon Siam', price:198, stars:5, blurb:'泰国天然草本，故事性强' },
+    { id:'sukontaGift', brand:'Sukonta 芳疗', name:'室内扩香礼盒', variant:'Icon Siam', price:328, stars:5, blurb:'礼盒定位高，送礼场景强' },
+    { id:'luna', brand:'Luna on Heel', name:'经典跟鞋 Microfiber', variant:'Central / 品牌门店 · 35–40', price:308, stars:4, blurb:'防水防汗，全年热销回购率高' },
+  ];
+
+  const grid = document.getElementById('productGrid');
+  const orderLines = document.getElementById('orderLines');
+  const orderEmpty = document.getElementById('orderEmpty');
+  const stubTotal = document.getElementById('stubTotal');
+  const stubItems = document.getElementById('stubItems');
+  const orderNo = document.getElementById('orderNo');
+  const prodCount = document.getElementById('prod-count');
+  const toast = document.getElementById('toast');
+
+  const brandCount = new Set(PRODUCTS.map(p => p.brand)).size;
+  prodCount.textContent = brandCount + ' BRANDS · ' + PRODUCTS.length + ' ITEMS';
+
+  const cart = {}; // id -> qty
+
+  function stars(n){
+    return '★'.repeat(n) + '☆'.repeat(5-n);
+  }
+
+  function renderGrid(){
+    grid.innerHTML = PRODUCTS.map((p, i) => `
+      <div class="tag ${cart[p.id] ? 'selected' : ''}" data-id="${p.id}" role="button" tabindex="0" aria-pressed="${!!cart[p.id]}">
+        <div class="tag-hole"></div>
+        <div class="tag-rank">NO. ${String(i+1).padStart(2,'0')} · ${p.brand}</div>
+        <div class="tag-name">${p.name}</div>
+        <div class="tag-variant">${p.variant}</div>
+        <div class="tag-divider"></div>
+        <div class="tag-price-row">
+          <div class="tag-price">RM ${p.price}<small> /件</small></div>
+          <div class="tag-stars" title="开团可塑性">${stars(p.stars)}</div>
+        </div>
+        <div class="tag-blurb">${p.blurb}</div>
+        <div class="tag-add">${cart[p.id] ? `已加入 · ${cart[p.id]} 件` : '+ 加入订单'}</div>
+      </div>
+    `).join('');
+
+    grid.querySelectorAll('.tag').forEach(el => {
+      el.addEventListener('click', () => toggleItem(el.dataset.id));
+      el.addEventListener('keydown', (e) => {
+        if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); toggleItem(el.dataset.id); }
+      });
+    });
+  }
+
+  function toggleItem(id){
+    if(cart[id]){
+      delete cart[id];
+      showToast('已移除');
+    } else {
+      cart[id] = 1;
+      showToast('已加入订单');
+    }
+    renderGrid();
+    renderOrder();
+  }
+
+  function changeQty(id, delta){
+    if(!cart[id]) return;
+    cart[id] += delta;
+    if(cart[id] <= 0) delete cart[id];
+    renderGrid();
+    renderOrder();
+  }
+
+  function renderOrder(){
+    const ids = Object.keys(cart);
+    if(ids.length === 0){
+      orderLines.innerHTML = '';
+      orderLines.appendChild(orderEmpty);
+      stubTotal.textContent = 'RM 0';
+      stubItems.textContent = '0';
+      return;
+    }
+    let total = 0, items = 0;
+    orderLines.innerHTML = ids.map(id => {
+      const p = PRODUCTS.find(x => x.id === id);
+      const qty = cart[id];
+      total += p.price * qty;
+      items += qty;
+      return `
+        <div class="order-line">
+          <span>${p.brand} — ${p.name}</span>
+          <span class="qty-ctrl">
+            <button type="button" aria-label="减少数量" data-action="dec" data-id="${id}">−</button>
+            <span class="mono">${qty}</span>
+            <button type="button" aria-label="增加数量" data-action="inc" data-id="${id}">+</button>
+            <span class="mono" style="min-width:64px; text-align:right;">RM ${p.price * qty}</span>
+          </span>
+        </div>
+      `;
+    }).join('');
+
+    orderLines.querySelectorAll('button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const id = btn.dataset.id;
+        changeQty(id, btn.dataset.action === 'inc' ? 1 : -1);
+      });
+    });
+
+    stubTotal.textContent = 'RM ' + total;
+    stubItems.textContent = items;
+  }
+
+  function showToast(msg){
+    toast.textContent = msg;
+    toast.classList.add('show');
+    clearTimeout(window._toastTimer);
+    window._toastTimer = setTimeout(() => toast.classList.remove('show'), 1800);
+  }
+
+  function genOrderNo(){
+    const n = Math.floor(1000 + Math.random()*9000);
+    return 'BKK-' + n;
+  }
+
+  document.getElementById('submitOrder').addEventListener('click', () => {
+    const name = document.getElementById('buyerName').value.trim();
+    const contact = document.getElementById('buyerContact').value.trim();
+    if(Object.keys(cart).length === 0){
+      showToast('请先选购至少一件产品');
+      document.getElementById('products').scrollIntoView({behavior:'smooth'});
+      return;
+    }
+    if(!name || !contact){
+      showToast('请填写姓名与联系方式');
+      return;
+    }
+    const no = genOrderNo();
+    orderNo.textContent = no;
+    showToast('订单已生成：' + no + '，请截图保存');
+  });
+
+  renderGrid();
+  renderOrder();
+</script>
+
+</body>
+</html>
